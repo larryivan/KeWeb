@@ -1,6 +1,28 @@
 <template>
   <div class="bg-white dark:bg-slate-900 px-4 py-12 sm:px-6 lg:px-8">
     <div class="max-w-6xl mx-auto">
+      <!-- Fudan University Logo Carousel with Auto-rotation -->
+      <div class="mb-10">
+        <div class="relative overflow-hidden rounded-xl shadow-lg"
+             @mouseenter="pauseCarousel" 
+             @mouseleave="resumeCarousel">
+          <div class="flex transition-transform duration-500" :style="{ transform: `translateX(-${currentSlide * 100}%)` }">
+            <div v-for="(image, index) in fuLogos" :key="index" class="w-full flex-shrink-0">
+              <img :src="image" :alt="`Fudan University Logo ${index + 1}`" class="w-full h-48 object-cover" />
+            </div>
+          </div>
+          <!-- Navigation dots -->
+          <div class="absolute bottom-4 left-0 right-0 flex justify-center space-x-2">
+            <button v-for="(_, index) in fuLogos" 
+                    :key="index" 
+                    @click="goToSlide(index)"
+                    class="w-3 h-3 rounded-full transition-colors duration-200"
+                    :class="index === currentSlide ? 'bg-amber-500' : 'bg-gray-300'">
+            </button>
+          </div>
+        </div>
+      </div>
+      
       <!-- Grid layout for contact information and research details -->
       <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-12">
         <!-- Left column: Contact info -->
@@ -8,8 +30,8 @@
           <!-- Contact card with improved layout -->
           <div class="bg-white dark:bg-slate-800 rounded-xl shadow-lg overflow-hidden border border-gray-100 dark:border-slate-700 transform transition duration-300 hover:shadow-xl">
             <div class="bg-gradient-to-r from-amber-500 to-amber-600 p-8 flex items-center">
-              <div class="h-24 w-24 rounded-full bg-white dark:bg-slate-700 flex items-center justify-center text-3xl font-bold text-amber-600 shadow-lg border-4 border-amber-100 dark:border-amber-800/50">
-                KW
+              <div class="h-24 w-24 rounded-full bg-white dark:bg-slate-700 flex items-center justify-center text-3xl font-bold text-amber-600 shadow-lg border-4 border-amber-100 dark:border-amber-800/50 overflow-hidden">
+                <img src="https://larryivan.github.io/picx-images-hosting/20250507/C0tPlA-R_400x400.1e8thpvevd.jpg" alt="Dr. Ke Wang" class="w-full h-full object-cover" />
               </div>
               <div class="ml-6">
                 <h2 class="text-2xl font-bold text-white">Dr. Ke Wang</h2>
@@ -43,6 +65,17 @@
                 </div>
               </div>
               
+              <!-- Gaode Map Location -->
+              <div class="mt-6 pt-6 border-t border-gray-100 dark:border-slate-700">
+                <h4 class="font-semibold text-gray-800 dark:text-gray-200 mb-3 flex items-center">
+                  <svg class="w-4 h-4 mr-2 text-amber-500" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd" />
+                  </svg>
+                  Location
+                </h4>
+                <div id="gaodeMap" class="h-56 w-full rounded-lg overflow-hidden border border-gray-100 dark:border-slate-700"></div>
+              </div>
+              
               <!-- Social Links -->
               <div class="mt-6 pt-6 border-t border-gray-100 dark:border-slate-700 flex space-x-4">
                 <a href="#" class="text-gray-400 hover:text-amber-500 transition">
@@ -50,12 +83,12 @@
                     <path d="M19.7 3H4.3C3.582 3 3 3.582 3 4.3v15.4c0 .718.582 1.3 1.3 1.3h15.4c.718 0 1.3-.582 1.3-1.3V4.3c0-.718-.582-1.3-1.3-1.3zm-4.2 16h-2.4v-6.5c0-.718-.05-1.643-1-1.643-1.035 0-1.2.776-1.2 1.576V19h-2.4v-9.5h2.305v1.059h.033C11.39 9.85 12.03 9 13.348 9 15.789 9 16 10.357 16 12.235V19z"></path>
                   </svg>
                 </a>
-                <a href="#" class="text-gray-400 hover:text-amber-500 transition">
+                <a href="https://github.com/wangke16" class="text-gray-400 hover:text-amber-500 transition">
                   <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
                     <path d="M12 2C6.477 2 2 6.477 2 12c0 4.42 2.865 8.166 6.839 9.489.5.092.682-.217.682-.482 0-.237-.008-.866-.013-1.7-2.782.603-3.369-1.34-3.369-1.34-.454-1.156-1.11-1.462-1.11-1.462-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.53 2.341 1.088 2.91.832.091-.647.35-1.088.636-1.338-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.272.098-2.65 0 0 .84-.269 2.75 1.025A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.294 2.747-1.025 2.747-1.025.546 1.378.203 2.397.1 2.65.64.699 1.028 1.592 1.028 2.683 0 3.841-2.337 4.687-4.565 4.935.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.481C19.138 20.161 22 16.416 22 12c0-5.523-4.477-10-10-10z"></path>
                   </svg>
                 </a>
-                <a href="#" class="text-gray-400 hover:text-amber-500 transition">
+                <a href="https://x.com/kwangwangk" class="text-gray-400 hover:text-amber-500 transition">
                   <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
                     <path d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84"></path>
                   </svg>
@@ -127,6 +160,59 @@
 </template>
 
 <script setup>
+import { ref, onMounted, onUnmounted } from 'vue';
+
+const currentSlide = ref(0);
+const fuLogos = [
+  'https://larryivan.github.io/picx-images-hosting/20250507/1.67xodug9di.jpg',
+  'https://larryivan.github.io/picx-images-hosting/20250507/3.32i6ewlxou.jpg',
+  'https://larryivan.github.io/picx-images-hosting/20250507/5.3nru17j1cf.jpg',
+  'https://larryivan.github.io/picx-images-hosting/20250507/6.6iki6zyhhp.jpg',
+  'https://larryivan.github.io/picx-images-hosting/20250507/7.2yykh6w1r0.jpg',
+  'https://larryivan.github.io/picx-images-hosting/20250507/8.1ovnave9z1.jpg'
+];
+const carouselInterval = ref(null);
+const autoPlayDelay = 4000; // 4 seconds between slides
+
+// Function to go to a specific slide and reset the timer
+const goToSlide = (index) => {
+  currentSlide.value = index;
+  restartCarouselTimer();
+};
+
+// Function to advance to the next slide
+const nextSlide = () => {
+  currentSlide.value = (currentSlide.value + 1) % fuLogos.length;
+};
+
+// Function to start the carousel timer
+const startCarouselTimer = () => {
+  carouselInterval.value = setInterval(nextSlide, autoPlayDelay);
+};
+
+// Function to clear and restart the carousel timer
+const restartCarouselTimer = () => {
+  if (carouselInterval.value) {
+    clearInterval(carouselInterval.value);
+  }
+  startCarouselTimer();
+};
+
+// Pause carousel on mouse hover
+const pauseCarousel = () => {
+  if (carouselInterval.value) {
+    clearInterval(carouselInterval.value);
+    carouselInterval.value = null;
+  }
+};
+
+// Resume carousel when mouse leaves
+const resumeCarousel = () => {
+  if (!carouselInterval.value) {
+    startCarouselTimer();
+  }
+};
+
 const researchAreas = [
   { name: 'Ancient DNA' },
   { name: 'Human Evolution' },
@@ -143,4 +229,52 @@ const achievements = [
   'Supported by the Shanghai Rising-star scientist program',
   'Grant recipient from the National Natural Science Foundation of China'
 ];
+
+// Add Gaode Map integration
+onMounted(() => {
+  // Start the carousel autoplay
+  startCarouselTimer();
+  
+  // Load Gaode Maps API
+  const script = document.createElement('script');
+  script.src = 'https://webapi.amap.com/maps?v=2.0&key=69548046e517d28d9d50056c97aa362d';
+  script.async = true;
+  document.head.appendChild(script);
+  
+  script.onload = () => {
+    // Initialize map after script loads
+    // Coordinates for Fudan University Jiangwan Campus (approximate)
+    const map = new AMap.Map('gaodeMap', {
+      center: [121.50816,31.340422], // Longitude, Latitude for Fudan University
+      zoom: 17,
+      resizeEnable: true
+    });
+    
+    // Add marker for the location
+    const marker = new AMap.Marker({
+      position: new AMap.LngLat(121.50816,31.340422),
+      title: 'School of Life Sciences, Jiangwan Campus'
+    });
+    
+    map.add(marker);
+    
+    // Add info window
+    const infoWindow = new AMap.InfoWindow({
+      content: '<div class="p-2"><strong>Dr. Ke Wang</strong><br>School of Life Sciences<br>Fudan University</div>',
+      offset: new AMap.Pixel(0, -30)
+    });
+    
+    // Open info window when marker is clicked
+    marker.on('click', () => {
+      infoWindow.open(map, marker.getPosition());
+    });
+  };
+});
+
+onUnmounted(() => {
+  // Clean up interval when component is destroyed
+  if (carouselInterval.value) {
+    clearInterval(carouselInterval.value);
+  }
+});
 </script>

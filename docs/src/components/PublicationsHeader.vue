@@ -1,7 +1,11 @@
 <template>
   <div class="publications-full-width">
     <!-- Full-width banner with gradient design matching BlogArchive -->
-    <div class="w-full bg-gradient-to-r from-amber-100 to-amber-50 dark:from-amber-950/80 dark:to-slate-900 border-b border-amber-200 dark:border-amber-900/30 mb-12">
+    <div class="w-full bg-gradient-to-r from-amber-100 to-amber-50 dark:from-amber-950/80 dark:to-slate-900 border-b border-amber-200 dark:border-amber-900/30 mb-12 relative overflow-hidden">
+      <!-- Add Fudan University image as background -->
+      <div class="absolute inset-0 opacity-20 dark:opacity-10">
+        <img src="https://larryivan.github.io/picx-images-hosting/20250507/7.2yykh6w1r0.jpg" alt="Fudan University" class="w-full h-full object-cover" />
+      </div>
       <div class="absolute inset-0 opacity-5 dna-pattern-enhanced"></div>
       <div class="relative mx-auto max-w-6xl px-4 py-24 sm:px-6">
         <div class="flex flex-col items-center justify-center text-center">
