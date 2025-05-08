@@ -632,8 +632,9 @@
     /* Adjust side padding for better readability on mobile.
        VitePress default is 24px. You can adjust this value as needed.
        Example: using 20px for slightly different spacing. */
-    padding-left: 20px;
-    padding-right: 20px;
+    /* MODIFIED: Increased padding for better spacing */
+    padding-left: 24px;
+    padding-right: 24px;
     /* Top and bottom padding can also be adjusted if necessary.
        Default top is 32px, default bottom is 96px. */
     /* padding-top: 24px; */
