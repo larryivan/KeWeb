@@ -1,6 +1,7 @@
 import DefaultTheme from "vitepress/theme";
 import { Theme, useRoute } from "vitepress";
 import "./tailwind.css";
+import "./custom.css"
 
 import LinkCard from "../components/LinkCard.vue";
 import HText from "../components/HText.vue";
