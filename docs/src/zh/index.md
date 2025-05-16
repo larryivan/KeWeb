@@ -14,7 +14,7 @@ hero:
       text: 博客
       link: /zh/Notes
     - theme: alt
-      text: 出版物
+      text: 学术成果
       link: /zh/Publications
     - theme: alt
       text: 成员
@@ -96,6 +96,18 @@ features:
     </div>
   </div>
 </div>
+
+<!-- QRCode Section -->
+<div class="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8 text-center">
+  <h2 class="text-3xl font-bold mb-8 border-l-4 border-primary pl-4 text-color-text-1 inline-block">关注我们</h2>
+  <div class="mt-8 flex flex-col items-center">
+    <img src="https://larryivan.github.io/picx-images-hosting/20250516/640.1ap7x401ma.jpg" alt="公众号二维码" class="w-48 h-48 object-cover rounded-lg shadow-lg mb-4" />
+    <p class="text-lg text-color-text-2 max-w-md">
+      欢迎扫描二维码关注我们的官方微信公众号，获取最新研究动态、科普文章和团队新闻。
+    </p>
+  </div>
+</div>
+<!-- End QRCode Section -->
 
 <style>
 /* Dark/Light mode compatible styles */

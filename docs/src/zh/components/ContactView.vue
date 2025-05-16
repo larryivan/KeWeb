@@ -60,7 +60,7 @@
                     </svg>
                   </div>
                   <span class="ml-3 text-gray-700 dark:text-gray-200">
-                    江湾校区生命科学学院
+                    复旦大学江湾校区生命科学学院
                   </span>
                 </div>
               </div>

@@ -21,10 +21,10 @@
                   <h3 class="text-2xl sm:text-3xl font-bold text-gray-900 dark:text-white text-center sm:text-left">{{ principalInvestigator.name }}</h3>
                 </div>
                 <div class="text-gray-700 dark:text-gray-300 text-base leading-relaxed space-y-4 max-w-prose" v-html="principalInvestigator.bio"></div>
-                <div class="mt-4 text-amber-600 dark:text-amber-400 font-medium flex items-center justify-center md:justify-start">
+                <a class="mt-4 text-amber-600 dark:text-amber-400 font-medium flex items-center justify-center md:justify-start" href="/zh/Contact.html">
                   <span>点击查看联系方式</span>
                   <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
-                </div>
+                </a>
               </div>
             </div>
           </div>
