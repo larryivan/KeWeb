@@ -1,6 +1,6 @@
 <template>
-  <div v-if="lastUpdated" class="py-1 text-sm font-medium">
-    📝 Last updated: {{ lastUpdated }}
+  <div v-if="lastUpdated && lastUpdatedText" class="py-1 text-sm font-medium">
+    📝 {{ lastUpdatedText }}: {{ lastUpdated }}
   </div>
 </template>
 
@@ -9,7 +9,7 @@ import { useData } from "vitepress";
 import { computed } from "vue";
 import dayjs from "dayjs";
 
-const { frontmatter, page } = useData();
+const { frontmatter, page, theme } = useData();
 
 const lastUpdated = computed(() => {
   // 禁用日期判定
@@ -19,4 +19,7 @@ const lastUpdated = computed(() => {
   // 取系统生成的 git 提交时间
   else return dayjs(page.value.lastUpdated).format("YYYY-MM-DD HH:mm") || "";
 });
+
+const lastUpdatedText = computed(() => theme.value.lastUpdatedText);
+
 </script>

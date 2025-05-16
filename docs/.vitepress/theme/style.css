@@ -1,0 +1,26 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* 语言切换器样式 */
+.vp-doc .language-switcher {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.vp-doc .language-switcher a {
+  font-size: 14px;
+  color: var(--vp-c-text-2);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.vp-doc .language-switcher a:hover {
+  color: var(--vp-c-brand);
+}
+
+.vp-doc .language-switcher a.active {
+  color: var(--vp-c-brand);
+  font-weight: 600;
+} 
