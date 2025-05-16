@@ -121,4 +121,7 @@ export default defineConfig({
     },
   },
   lastUpdated: true,
+  sitemap: {
+    hostname: 'https://wangke-evoanthropology.site'
+  },
 });
