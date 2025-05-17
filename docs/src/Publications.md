@@ -127,20 +127,22 @@ import Header from "./components/PublicationsHeader.vue"
 </style>
 
 <div class="publications-list">
-1. Wang, K., Prüfer, K.,Krause-Kyora, B.,et al. (2023) High-coverage genome of the Tyrolean Iceman reveals unusually high Anatolian farmer ancestry. Cell Genomics 3(9) (Cover Page)
+Wang, K., Tobias, B., Pany-Kucera, D. et al. Ancient DNA reveals reproductive barrier despite shared Avar-period culture. Nature 638, 1007–1014 (2025). https://doi.org/10.1038/s41586-024-08418-5
 &nbsp; <br/>
-2. Wang, K.* Yu, H., Radzeviciute, R. et al. (2023) Middle Holocene Siberian genomes reveal highly connected gene pools throughout North Asia. Current Biology 33(3): 423-433 (* correspondence).
+Wang, K., Prüfer, K.,Krause-Kyora, B.,et al. (2023) High-coverage genome of the Tyrolean Iceman reveals unusually high Anatolian farmer ancestry. Cell Genomics 3(9) (Cover Page)
 &nbsp; <br/>
-3. Naegele, K., Rivollat, M., Yu, H., Wang, K.(2022) Ancient genomic research – From broad strokes to nuanced reconstructions of the past. Journal of Anthropological Sciences 100.
+Wang, K.* Yu, H., Radzeviciute, R. et al. (2023) Middle Holocene Siberian genomes reveal highly connected gene pools throughout North Asia. Current Biology 33(3): 423-433 (* correspondence).
 &nbsp; <br/>
-4. Wang, K., Bleasdale, M., Le Moyne, C. et al. (2022) 4000-year-old hair from the Middle Nile highlights unusual ancient DNA degradation pattern and a potential source of early eastern Africa pastoralists. Scientific Reports 12(20939)
+Naegele, K., Rivollat, M., Yu, H., Wang, K.(2022) Ancient genomic research – From broad strokes to nuanced reconstructions of the past. Journal of Anthropological Sciences 100.
 &nbsp; <br/>
-5. Jeong, C. +, Wang, K.+, Wilkin, S., Taylor, W. T. T., et al (2020) A dynamic 6,000-year genetic history of Eurasia’s Eastern Steppe. Cell, 2020;183: 890–904.e29. (+equal contribution)
+Wang, K., Bleasdale, M., Le Moyne, C. et al. (2022) 4000-year-old hair from the Middle Nile highlights unusual ancient DNA degradation pattern and a potential source of early eastern Africa pastoralists. Scientific Reports 12(20939)
 &nbsp; <br/>
-6. Wang, K.+, Goldstein, S.+, Bleasdale, M., et al (2020). Ancient genomes reveal complex patterns of population movement, interaction and replacement in sub-Saharan Africa. Science Advances, 2020;6: eaaz0183. (+equal contribution)
+Jeong, C. +, Wang, K.+, Wilkin, S., Taylor, W. T. T., et al (2020) A dynamic 6,000-year genetic history of Eurasia’s Eastern Steppe. Cell, 2020;183: 890–904.e29. (+equal contribution)
 &nbsp; <br/>
-7. Schiffels, S., Wang, K. (2020) MSMC and MSMC2: The Multiple Sequentially Markovian Coalescent. In: Dutheil J. (eds) Statistical Population Genomics. Methods in Molecular Biology, vol 2090. Humana, New York, NY
+Wang, K.+, Goldstein, S.+, Bleasdale, M., et al (2020). Ancient genomes reveal complex patterns of population movement, interaction and replacement in sub-Saharan Africa. Science Advances, 2020;6: eaaz0183. (+equal contribution)
 &nbsp; <br/>
-8. Wang, K., Mathieson, I., O’Connell, J., Schiffels, S. (2020) Tracking human population structure through time from whole genome sequences. PLoS Genetics 16(3): e1008552.
+Schiffels, S., Wang, K. (2020) MSMC and MSMC2: The Multiple Sequentially Markovian Coalescent. In: Dutheil J. (eds) Statistical Population Genomics. Methods in Molecular Biology, vol 2090. Humana, New York, NY
+&nbsp; <br/>
+Wang, K., Mathieson, I., O’Connell, J., Schiffels, S. (2020) Tracking human population structure through time from whole genome sequences. PLoS Genetics 16(3): e1008552.
 &nbsp; <br/>
 </div>
