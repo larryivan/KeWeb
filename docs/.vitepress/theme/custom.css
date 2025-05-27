@@ -686,3 +686,11 @@
     -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
   }
 }
+
+/* Hide search bar on medium screens (tablets) to prevent overflow */
+/* Search should be accessible via the mobile menu (often triggered by vpi-more-horizontal) */
+@media (min-width: 768px) and (max-width: 959px) {
+  .VPNavBarSearch {
+    display: none;
+  }
+}

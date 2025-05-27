@@ -47,10 +47,11 @@ export default defineConfig({
         nav: [
           { text: "博客", link: "/zh/Notes/index" },
           { text: "学术成果", link: "/zh/Publications" },
-          { text: "公众科普", link: "/zh/PO.md"},
-          { text: "软件", link: "/zh/Software.md" },
-          { text: "成员", link: "/zh/Members.md" },
-          { text: "联系我们", link: "/zh/Contact.md" },
+          { text: "公众科普", link: "/zh/PO."},
+          { text: "媒体报道", link: "/zh/Press"},
+          { text: "软件", link: "/zh/Software." },
+          { text: "成员", link: "/zh/Members" },
+          { text: "联系我们", link: "/zh/Contact" },
         ],
         footer: {
           copyright: "版权所有 © 2025-present 复旦大学王轲课题组.",
@@ -74,10 +75,11 @@ export default defineConfig({
     nav: [
       { text: "Blogs", link: "/Notes/index" },
       { text: "Publications", link: "/Publications" },
-      { text: "Public Outreach", link: "./PO.md"},
-      { text: "Software", link: "Software.md" },
-      { text: "Members", link: "Members.md" },
-      { text: "Contact", link: "/Contact.md" },
+      { text: "Public Outreach", link: "/PO"},
+      { text: "Press", link: "/Press"},
+      { text: "Software", link: "/Software" },
+      { text: "Members", link: "/Members" },
+      { text: "Contact", link: "/Contact" },
     ],
     // 顶部导航栏左侧的社交平台跳转
     socialLinks: [{ icon: "github", link: "https://github.com/wangke16" }],
