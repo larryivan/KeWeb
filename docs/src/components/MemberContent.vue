@@ -316,6 +316,12 @@ const memberCategories = [
         name: "Gao, Yan 高焱",
         image: "https://larryivan.github.io/picx-images-hosting/20250507/3gy-1.8hgoxc2vh5.jpg",
         bio: "Yan Gao is a doctoral student at Fudan University. He received his Bachelor's degree from Zhejiang Occean University in 2021 and his Master's degree from Shantou University in 2024. In recent years, Yan has primarily focused on understanding the molecular mechanisms of adaptive evolution in marine organisms, such as fish and crabs, as well as their population genetic structures. Currently, his research interest is dedicated to integrating ancient DNA data with modern genomic data to explore the spatiotemporal changes of ancient human populations and their adaptive evolutionary mechanisms.",
+      },
+      {
+        id: "lwt",
+        name: "Liu, Wentao 刘文韬",
+        image: "https://larryivan.github.io/picx-images-hosting/20250917/lwt.4xuwhwuh5w.webp",
+        bio: "I obtained my Master's degree in Biological and Pharmaceutical Engineering (BGI Joint Program) from the School of Life Sciences at the University of Chinese Academy of Sciences. I am currently pursuing my Ph.D. in Anthropology at the School of Life Sciences, Fudan University.My research is focused on unraveling the complex processes of ancient human origins and evolution.",
       }
     ]
   },
@@ -334,6 +340,13 @@ const memberCategories = [
         image: "https://larryivan.github.io/picx-images-hosting/20250507/Screenshot-2025-05-07-at-15.44.16.60ugiepzcx.jpg",
         bio: "I received my Bachelor’s degree in Life Sciences from Jilin University and began my Master’s studies at the School of Life Sciences, Fudan University in 2024. My current work focuses on ancient DNA research, particularly wet lab procedures such as the construction of whole-genome libraries from archaeological samples. Currently, I am interested in genome-wide analysis of ancient East Asian populations.Outside of the lab, I enjoy walking around the city, swimming, and spending time with cats.",
         email: "zhangchengcheng62@gmail.com",
+      },
+      {
+        id: "ljy",
+        name: "Li,Jiayi 李嘉弈",
+        image: "https://larryivan.github.io/picx-images-hosting/20250917/ljy.1zimeemgxl.webp",
+        bio: "I am currently pursuing a Master’s degree in Biology at Fudan University, after earning my Bachelor’s degree in Bioinformatics from Huazhong Agricultural University. My research interests in population genetics in East Asia, with particular attention to genetic interactions during periods of cultural exchange. Ancient DNA analysis with statistical modeling and integrate evidence from archaeology and other disciplines are combined to reveal patterns of population migration and social structure evolution.",
+        email: "biqiuso0614@gmail.com",
       }
     ]
   },

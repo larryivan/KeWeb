@@ -216,6 +216,12 @@ const memberCategories = [
         name: "Gao, Yan 高焱",
         image: "https://larryivan.github.io/picx-images-hosting/20250507/3gy-1.8hgoxc2vh5.jpg",
         bio: "高焱是复旦大学的博士研究生。他于2021年获得浙江海洋大学学士学位，并于2024年获得汕头大学硕士学位。近年来，高焱主要致力于研究海洋生物（如鱼类和螃蟹）适应性进化的分子机制及其种群遗传结构。目前，他的研究兴趣是整合古DNA数据与现代基因组数据，探索古代人类群体的时空变化及其适应性进化机制。",
+      },
+      {
+        id: "lwt",
+        name: "Liu, Wentao 刘文韬",
+        image: "https://larryivan.github.io/picx-images-hosting/20250917/lwt.4xuwhwuh5w.webp",
+        bio: "我于中国科学院大学生命科学学院获得生物与医药专业硕士学位（华大专项），现于复旦大学生命科学学院攻读人类学博士学位。我的研究兴趣是运用生物信息学与基因组学方法，揭示古人类的起源与演化历程。",
       }
     ]
   },
@@ -234,6 +240,13 @@ const memberCategories = [
         image: "https://larryivan.github.io/picx-images-hosting/20250507/Screenshot-2025-05-07-at-15.44.16.60ugiepzcx.jpg",
         bio: "我获得了吉林大学生命科学学士学位，并于2024年开始在复旦大学生命科学学院攻读硕士学位。我目前的工作重点是古DNA研究，特别是湿实验程序，如从考古样本中构建全基因组文库。目前，我对古代东亚人群的全基因组分析感兴趣。在实验室之外，我喜欢在城市里散步、游泳和与猫共度时光。",
         email: "zhangchengcheng62@gmail.com",
+      },
+      {
+        id: "ljy",
+        name: "Li,Jiayi 李嘉弈",
+        image: "https://larryivan.github.io/picx-images-hosting/20250917/ljy.1zimeemgxl.webp",
+        bio: "我本科毕业于华中农业大学生物信息学专业，现于复旦大学攻读生物学硕士学位。我的研究方向为东亚群体遗传学，尤其关注文化交流时期的基因互动。研究方法整合了古DNA分析、统计建模以及考古学等多学科证据，旨在揭示人群迁徙模式与社会结构的演化规律。",
+        email: "biqiuso0614@gmail.com",
       }
     ]
   },
@@ -250,7 +263,7 @@ const memberCategories = [
         id: "Larry",
         name: "Han, Yufan 韩宇帆",
         image: "https://larryivan.github.io/picx-images-hosting/20250507/IMG_202505028154_768x1024.2yykh7oxx8.jpg",
-        bio: "大二生物科学专业学生，对群体遗传学和生物信息学充满热情。熟练掌握Python、C++和Vue。寻求研究机会，将计算方法应用于遗传分析。",
+        bio: "大三生物科学专业学生，对群体遗传学和生物信息学充满热情。熟练掌握Python、C++和Vue。寻求研究机会，将计算方法应用于遗传分析。",
         github: "https://github.com/larryivan",
         email: "larryivanhan@gmail.com",
         publications: [

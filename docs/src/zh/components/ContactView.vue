@@ -78,17 +78,22 @@
               
               <!-- Social Links -->
               <div class="mt-6 pt-6 border-t border-gray-100 dark:border-slate-700 flex space-x-4">
-                <a href="#" class="text-gray-400 hover:text-amber-500 transition">
-                  <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M19.7 3H4.3C3.582 3 3 3.582 3 4.3v15.4c0 .718.582 1.3 1.3 1.3h15.4c.718 0 1.3-.582 1.3-1.3V4.3c0-.718-.582-1.3-1.3-1.3zm-4.2 16h-2.4v-6.5c0-.718-.05-1.643-1-1.643-1.035 0-1.2.776-1.2 1.576V19h-2.4v-9.5h2.305v1.059h.033C11.39 9.85 12.03 9 13.348 9 15.789 9 16 10.357 16 12.235V19z"></path>
+                <a href="https://orcid.org/0000-0003-3935-8344" target="_blank" class="text-gray-400 hover:text-amber-500 transition">
+                  <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 256 256" style="enable-background:new 0 0 256 256;" xml:space="preserve" class="h-6 w-6">
+                    <path fill="#A6CE39" d="M256,128c0,70.7-57.3,128-128,128C57.3,256,0,198.7,0,128C0,57.3,57.3,0,128,0C198.7,0,256,57.3,256,128z"/>
+                    <g>
+                      <path fill="#FFFFFF" d="M86.3,186.2H70.9V79.1h15.4v48.4V186.2z"/>
+                      <path fill="#FFFFFF" d="M108.9,79.1h41.6c39.6,0,57,28.3,57,53.6c0,27.5-21.5,53.6-56.8,53.6h-41.8V79.1z M124.3,172.4h24.5 c34.9,0,42.9-26.5,42.9-39.7c0-21.5-13.7-39.7-43.7-39.7h-23.7V172.4z"/>
+                      <path fill="#FFFFFF" d="M88.7,56.8c0,5.5-4.5,10.1-10.1,10.1c-5.6,0-10.1-4.6-10.1-10.1c0-5.6,4.5-10.1,10.1-10.1 C84.2,46.7,88.7,51.3,88.7,56.8z"/>
+                    </g>
                   </svg>
                 </a>
-                <a href="https://github.com/wangke16" class="text-gray-400 hover:text-amber-500 transition">
+                <a href="https://github.com/wangke16" target="_blank" class="text-gray-400 hover:text-amber-500 transition">
                   <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
                     <path d="M12 2C6.477 2 2 6.477 2 12c0 4.42 2.865 8.166 6.839 9.489.5.092.682-.217.682-.482 0-.237-.008-.866-.013-1.7-2.782.603-3.369-1.34-3.369-1.34-.454-1.156-1.11-1.462-1.11-1.462-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.53 2.341 1.088 2.91.832.091-.647.35-1.088.636-1.338-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.272.098-2.65 0 0 .84-.269 2.75 1.025A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.294 2.747-1.025 2.747-1.025.546 1.378.203 2.397.1 2.65.64.699 1.028 1.592 1.028 2.683 0 3.841-2.337 4.687-4.565 4.935.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.481C19.138 20.161 22 16.416 22 12c0-5.523-4.477-10-10-10z"></path>
                   </svg>
                 </a>
-                <a href="https://x.com/kwangwangk" class="text-gray-400 hover:text-amber-500 transition">
+                <a href="https://x.com/kwangwangk" target="_blank" class="text-gray-400 hover:text-amber-500 transition">
                   <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
                     <path d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84"></path>
                   </svg>
@@ -126,7 +131,10 @@
             
             <div class="border-b border-gray-100 dark:border-slate-700 pb-6 mb-6">
               <p class="text-gray-700 dark:text-gray-300 mb-4 leading-relaxed">
-                通过古基因组与开发新型计算方法探究亚欧非人群内、间的分化、隔离与交流。
+                研究聚焦于人类演化与群体历史，运用古DNA、基因组学、生物信息学、和考古人类学等多学科交叉办法多维度重建古代人类与社会演化历程。
+              </p>
+              <p class="text-gray-700 dark:text-gray-300 leading-relaxed">
+                揭示了亚欧大陆草原人群一万年以来的遗传与文化演变序列，阐明了历史时期蒙古草原人群，包括匈奴、柔然、蒙元等游牧部落的源流，重建百人规模的古代大型家族谱系并推断其家族与社群的婚配习俗、文化传统与社会风貌。以第一（含共一）及共通讯作者在Nature、Cell、Science Advances、Cell Genomics、Current Biology等期刊上发表了多篇论文，研究5次受Nature、Science撰文评述。
               </p>
             </div>
             
@@ -241,9 +249,14 @@ const achievements = [
   '德国马普协会Dieter Rampacher Prize 2021 （Max Planck Society）'
 ];
 
-const teachingInfo = '基因组学';
-const admissionMajors = '人类生物学、计算生物学';
-const researchProjects = ['国自然面上', '上海市启明星', 'ERC Horizon地平线项目'];
+const teachingInfo = '《基因组学》、《人类进化》、《专业英语》、《Human Evolutionary Genetics》';
+const admissionMajors = '人类生物学、生物信息学（面向本/硕/博/博后招生）';
+const researchProjects = [
+  '国家自然科学基金优秀青年科学基金（2026–2028）',
+  '国家自然科学基金面上项目（2023–2027）',
+  '上海市科技发展基金（2023–2026）',
+  '海外高层次人才引进启动经费（2022–2027）'
+];
 
 onMounted(() => {
   startCarouselTimer();
@@ -278,4 +291,4 @@ onUnmounted(() => {
     clearInterval(carouselInterval.value);
   }
 });
-</script> 
+</script>

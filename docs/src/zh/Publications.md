@@ -50,17 +50,17 @@ import Header from "./components/PublicationsHeader.vue"
   color: rgba(241, 245, 249, 0.95);
 }
 
-/* Add horizontal separation */
+/* CSS: 加强不同论文之间的分隔效果 */
 .publications-list br {
   display: block;
   content: "";
-  margin-top: 1.25rem;
-  margin-bottom: 0.25rem;
-  border-bottom: 1px dashed rgba(217, 119, 6, 0.15);
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
+  border-bottom: 1px dashed rgba(217, 119, 6, 0.35);
 }
 
 .dark .publications-list br {
-  border-bottom: 1px dashed rgba(245, 158, 11, 0.15);
+  border-bottom: 1px dashed rgba(245, 158, 11, 0.35);
 }
 
 /* Style the title text */
@@ -127,22 +127,34 @@ import Header from "./components/PublicationsHeader.vue"
 </style>
 
 <div class="publications-list">
-Wang, K., Tobias, B., Pany-Kucera, D. et al. Ancient DNA reveals reproductive barrier despite shared Avar-period culture. Nature 638, 1007–1014 (2025). https://doi.org/10.1038/s41586-024-08418-5
+Zou, Y., Tan, J., Zhou, J., Huang, Z., Yu, X., Han, K., Jin, L., Li, H., <strong>Wang, K.</strong> (2025) Ancient genomes from the Yellow River Bend reveal long-distance population interactions between the Central Plains, Steppe, and southern China. Cell Reports. https://doi.org/10.1016/j.celrep.2025.116034
 &nbsp; <br/>
-Wang, K., Prüfer, K.,Krause-Kyora, B.,et al. (2023) High-coverage genome of the Tyrolean Iceman reveals unusually high Anatolian farmer ancestry. Cell Genomics 3(9) (Cover Page)
+Qi, Y., Yin, Z., <strong>Wang, K.</strong> (2025-07-01) Ancient DNA reveals ancient kinship and social structures. Chinese Science Bulletin. https://doi.org/10.1360/csb-2025-0332
 &nbsp; <br/>
-Wang, K.* Yu, H., Radzeviciute, R. et al. (2023) Middle Holocene Siberian genomes reveal highly connected gene pools throughout North Asia. Current Biology 33(3): 423-433 (* correspondence).
+Zhang, Y., Wang, J., Yi, C., Su, Y., Yin, Z., Zhang, S., Jin, L., Stoneking, M., Yang, J., <strong>Wang, K.</strong>, et al. (2025-06) An ancient regulatory variant of ACSF3 influences the coevolution of increased human height and basal metabolic rate via metabolic homeostasis. Cell Genomics. https://doi.org/10.1016/j.xgen.2025.100855
 &nbsp; <br/>
-Naegele, K., Rivollat, M., Yu, H., Wang, K.(2022) Ancient genomic research – From broad strokes to nuanced reconstructions of the past. Journal of Anthropological Sciences 100.
+<strong>Wang, K.</strong>, Tobias, B., Pany-Kucera, D. et al. Ancient DNA reveals reproductive barrier despite shared Avar-period culture. Nature 638, 1007–1014 (2025). https://doi.org/10.1038/s41586-024-08418-5
 &nbsp; <br/>
-Wang, K., Bleasdale, M., Le Moyne, C. et al. (2022) 4000-year-old hair from the Middle Nile highlights unusual ancient DNA degradation pattern and a potential source of early eastern Africa pastoralists. Scientific Reports 12(20939)
+Goldstein, S. T., Mueller, N. G., Janzen, A., Ogola, C., Dal Martello, R., Fernandes, R., Li, S., Iminjili, V., Juengst, S., Otwani, A. O., et al. (2024-07) Early agriculture and crop transitions at Kakapel Rockshelter in the Lake Victoria region of eastern Africa. Proceedings of the Royal Society B: Biological Sciences. https://doi.org/10.1098/rspb.2023.2747
 &nbsp; <br/>
-Jeong, C. +, Wang, K.+, Wilkin, S., Taylor, W. T. T., et al (2020) A dynamic 6,000-year genetic history of Eurasia's Eastern Steppe. Cell, 2020;183: 890–904.e29. (+equal contribution)
+Geier, A., Trost, J., <strong>Wang, K.</strong>, Schmid, C., Krawczyk, M., Schiffels, S. (2024-06) PNPLA3 fatty liver allele was fixed in Neanderthals and segregates neutrally in humans. Gut. https://doi.org/10.1136/gutjnl-2023-331594
 &nbsp; <br/>
-Wang, K.+, Goldstein, S.+, Bleasdale, M., et al (2020). Ancient genomes reveal complex patterns of population movement, interaction and replacement in sub-Saharan Africa. Science Advances, 2020;6: eaaz0183. (+equal contribution)
+Gnecchi-Ruscone, G. A., Rácz, Z., Samu, L., Szeniczey, T., Faragó, N., Knipper, C., Friedrich, R., Zlámalová, D., Traverso, L., Liccardo, S., et al. (2024-05-09) Network of large pedigrees reveals social practices of Avar communities. Nature. https://doi.org/10.1038/s41586-024-07312-4
 &nbsp; <br/>
-Schiffels, S., Wang, K. (2020) MSMC and MSMC2: The Multiple Sequentially Markovian Coalescent. In: Dutheil J. (eds) Statistical Population Genomics. Methods in Molecular Biology, vol 2090. Humana, New York, NY
+<strong>Wang, K.</strong>, Prüfer, K.,Krause-Kyora, B.,et al. (2023) High-coverage genome of the Tyrolean Iceman reveals unusually high Anatolian farmer ancestry. Cell Genomics 3(9) (Cover Page)
 &nbsp; <br/>
-Wang, K., Mathieson, I., O'Connell, J., Schiffels, S. (2020) Tracking human population structure through time from whole genome sequences. PLoS Genetics 16(3): e1008552.
+<strong>Wang, K.*</strong> Yu, H., Radzeviciute, R. et al. (2023) Middle Holocene Siberian genomes reveal highly connected gene pools throughout North Asia. Current Biology 33(3): 423-433 (* correspondence).
 &nbsp; <br/>
-</div> 
+Naegele, K., Rivollat, M., Yu, H., <strong>Wang, K.</strong>(2022) Ancient genomic research – From broad strokes to nuanced reconstructions of the past. Journal of Anthropological Sciences 100.
+&nbsp; <br/>
+<strong>Wang, K.</strong>, Bleasdale, M., Le Moyne, C. et al. (2022) 4000-year-old hair from the Middle Nile highlights unusual ancient DNA degradation pattern and a potential source of early eastern Africa pastoralists. Scientific Reports 12(20939)
+&nbsp; <br/>
+Jeong, C. +, <strong>Wang, K.+</strong>, Wilkin, S., Taylor, W. T. T., et al (2020) A dynamic 6,000-year genetic history of Eurasia's Eastern Steppe. Cell, 2020;183: 890–904.e29. (+equal contribution)
+&nbsp; <br/>
+<strong>Wang, K.+</strong>, Goldstein, S.+, Bleasdale, M., et al (2020). Ancient genomes reveal complex patterns of population movement, interaction and replacement in sub-Saharan Africa. Science Advances, 2020;6: eaaz0183. (+equal contribution)
+&nbsp; <br/>
+Schiffels, S., <strong>Wang, K.</strong> (2020) MSMC and MSMC2: The Multiple Sequentially Markovian Coalescent. In: Dutheil J. (eds) Statistical Population Genomics. Methods in Molecular Biology, vol 2090. Humana, New York, NY
+&nbsp; <br/>
+<strong>Wang, K.</strong>, Mathieson, I., O'Connell, J., Schiffels, S. (2020) Tracking human population structure through time from whole genome sequences. PLoS Genetics 16(3): e1008552.
+&nbsp; <br/>
+</div>
