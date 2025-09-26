@@ -322,6 +322,12 @@ const memberCategories = [
         name: "Liu, Wentao 刘文韬",
         image: "https://larryivan.github.io/picx-images-hosting/20250917/lwt.4xuwhwuh5w.webp",
         bio: "I obtained my Master's degree in Biological and Pharmaceutical Engineering (BGI Joint Program) from the School of Life Sciences at the University of Chinese Academy of Sciences. I am currently pursuing my Ph.D. in Anthropology at the School of Life Sciences, Fudan University.My research is focused on unraveling the complex processes of ancient human origins and evolution.",
+      },
+      {
+        id: "ll",
+        name: "Li, Lei 李雷",
+        image: "https://larryivan.github.io/picx-images-hosting/20250926/ll.1hsl1zebc5.webp",
+        bio: "I graduated from the National Life Science Base Class at Huazhong Agricultural University in 2022 with a Bachelor's degree. In 2025, I obtained my Master's degree in Biology from ShanghaiTech University (jointly trained at Fudan University Cancer Hospital). Currently, I am pursuing a Ph.D. in Anthropology at the School of Life Sciences, Fudan University, dedicated to exploring human origins and evolution, hoping to further understand the fundamental question of 'what makes us human'.",
       }
     ]
   },

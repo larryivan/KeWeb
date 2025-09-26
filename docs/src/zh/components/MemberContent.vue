@@ -222,7 +222,13 @@ const memberCategories = [
         name: "Liu, Wentao 刘文韬",
         image: "https://larryivan.github.io/picx-images-hosting/20250917/lwt.4xuwhwuh5w.webp",
         bio: "我于中国科学院大学生命科学学院获得生物与医药专业硕士学位（华大专项），现于复旦大学生命科学学院攻读人类学博士学位。我的研究兴趣是运用生物信息学与基因组学方法，揭示古人类的起源与演化历程。",
-      }
+      },
+      {
+        id: "ll",
+        name: "Li, Lei 李雷",
+        image: "https://larryivan.github.io/picx-images-hosting/20250926/ll.1hsl1zebc5.webp",
+        bio: "我于2022年毕业于华中农业大学国家生命科学基地班，获学士学位；2025年于上海科技大学获得生物学硕士学位（复旦大学肿瘤医院联合培养）。目前，我在复旦大学生命科学学院攻读人类学博士学位，致力于探索人类的起源与演化，希望能进一步理解人之为人的根本问题。",
+      },
     ]
   },
   {
@@ -316,4 +322,4 @@ const memberCategories = [
 .dark .dark\:bg-slate-800 {
   border: 1px solid rgba(245, 158, 11, 0.05);
 }
-</style> 
+</style>
