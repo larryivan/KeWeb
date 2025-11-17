@@ -498,36 +498,66 @@
   --vp-nav-screen-bg-color: rgba(27, 27, 31, 0.9);
 }
 
-@keyframes vp-aurora-nav {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
-}
-
 .VPNavBar,
 .VPNavScreen.open .container {
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  background: rgba(255, 255, 255, 0.9);
+  border-bottom: 1px solid rgba(15, 23, 42, 0.08);
+  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.05);
+  transition: background 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
 
-  background-image: linear-gradient(
-    120deg,
-    hsla(0, 100%, 70%, 0.25),
-    hsla(30, 100%, 70%, 0.25),
-    hsla(60, 100%, 70%, 0.25),
-    hsla(120, 100%, 60%, 0.25),
-    hsla(180, 100%, 60%, 0.25),
-    hsla(240, 100%, 70%, 0.25),
-    hsla(270, 100%, 70%, 0.25),
-    hsla(360, 100%, 70%, 0.25)
-  );
-  background-size: 300% 300%;
-  animation: vp-aurora-nav 20s ease infinite;
+.dark .VPNavBar,
+.dark .VPNavScreen.open .container {
+  background: rgba(15, 23, 42, 0.92);
+  border-bottom-color: rgba(148, 163, 184, 0.25);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+}
+
+.VPNavBar .VPNavBarMenu :where(a, button) {
+  border-radius: 999px;
+  padding: 0.4rem 0.9rem;
+  font-weight: 500;
+  color: #374151;
+  transition: color 0.2s ease, background-color 0.2s ease;
+}
+
+.VPNavBar .VPNavBarMenu :where(a, button):hover,
+.VPNavBar .VPNavBarMenu :where(a, button).active {
+  background: transparent;
+  color: #1d4ed8;
+}
+
+.dark .VPNavBar .VPNavBarMenu :where(a, button) {
+  color: #e5e7eb;
+}
+
+.dark .VPNavBar .VPNavBarMenu :where(a, button):hover,
+.dark .VPNavBar .VPNavBarMenu :where(a, button).active {
+  background: transparent;
+  color: #93c5fd;
+}
+
+.VPNavBar .VPNavbarSearch {
+  border-radius: 999px;
+  border: 1px solid rgba(15, 23, 42, 0.1);
+}
+
+.dark .VPNavBar .VPNavbarSearch {
+  border-color: rgba(148, 163, 184, 0.25);
+}
+
+@media (max-width: 768px) {
+  .VPNavBar,
+  .VPNavScreen.open .container {
+    padding-inline: 1rem;
+    border-radius: 0 0 1.25rem 1.25rem;
+  }
+
+  .VPNavBar .VPNavBarMenu :where(a, button) {
+    padding: 0.6rem 1rem;
+  }
 }
 
 .hide-nav {
