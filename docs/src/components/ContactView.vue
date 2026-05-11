@@ -195,9 +195,9 @@ import { ref, onMounted, onUnmounted } from 'vue';
 const teachingInfo = 'Genomics; Human Evolution; Academic English; Human Evolutionary Genetics';
 const admissionMajors = 'Human Biology, Bioinformatics (open to undergraduate, master’s, PhD, and postdoctoral applicants)';
 const researchProjects = [
-  'National Natural Science Foundation for Excellent Young Scholars of China (2026–2028)',
+  'National Natural Science Foundation of China (Type B, formerly Excellent Young Scholars, 2026–2028)',
   'National Natural Science Foundation of China (General Program, 2023–2027)',
-  'Shanghai Science and Technology Development Funds (2023–2026)',
+  'Shanghai Rising-Star Program (2023–2026)',
   'Starting Grant for Overseas Talents (2022–2027)'
 ];
 
@@ -264,9 +264,10 @@ const researchAreas = [
 const achievements = [
   'PhD from Max Planck Institute for the Science of Human History (Dept. of Archaeogenetics, 2016-2020)',
   'Postdoctoral training at Max Planck Institute for Evolutionary Anthropology (2020-2022)',
+  'Led the publication of 1,001 ancient whole genomes, representing ~1/10 of the global ancient genome database',
+  'Research featured 5 times by Nature and Science, described by Nature as "leading a new wave in paleogenomics"',
   'Recipient of the Dieter Rampacher Prize of the Max Planck Society (2021)',
-  'Supported by the Shanghai Rising-star scientist program',
-  'Grant recipient from the National Natural Science Foundation of China'
+  'Recipient of Yakun Female Scientist Excellence Fund (2025)'
 ];
 
 // Add Gaode Map integration

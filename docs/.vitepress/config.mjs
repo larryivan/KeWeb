@@ -33,7 +33,9 @@ export default defineConfig({
           linksTitle: "Links",
           addressLine1: "School of Life Sciences Fudan University",
           addressLine2: "2005 Songhu Road, Shanghai 200438",
-          researchFocus: "Ancient Human DNA Research"
+          researchFocus: "Ancient Human DNA Research",
+          developerText: "Developed by",
+          reportBugsText: "Report bugs"
         }
       }
     },
@@ -60,7 +62,9 @@ export default defineConfig({
           linksTitle: "链接",
           addressLine1: "复旦大学生命科学学院",
           addressLine2: "上海市杨浦区淞沪路2005号 (邮编: 200438)",
-          researchFocus: "古人类DNA研究"
+          researchFocus: "古人类DNA研究",
+          developerText: "网页开发：",
+          reportBugsText: "反馈Bug"
         },
         lastUpdatedText: '最后更新于'
       }
@@ -91,7 +95,9 @@ export default defineConfig({
       linksTitle: "Links",
       addressLine1: "School of Life Sciences Fudan University",
       addressLine2: "2005 Songhu Road, Shanghai 200438",
-      researchFocus: "Ancient Human DNA Research"
+      researchFocus: "Ancient Human DNA Research",
+      developerText: "Developed by",
+      reportBugsText: "Report bugs"
     },
     // 【文章页面左侧导航】
     sidebar: false,

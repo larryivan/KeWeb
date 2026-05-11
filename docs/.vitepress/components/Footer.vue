@@ -42,6 +42,9 @@
           <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 inline-block text-emerald-600 dark:text-emerald-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 14.47V18a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-3.53"/><path d="M4 9.53V6a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v3.53"/><path d="M10.46 6.21 4.7 12l5.76 5.79"/><path d="m13.54 17.79 5.76-5.79-5.76-5.79"/></svg>
           <span class="text-emerald-600 dark:text-emerald-400">{{ footer.researchFocus }}</span>
         </p>
+        <p class="text-xs text-zinc-400 dark:text-zinc-500 mt-2">
+          {{ footer.developerText || 'Developed by' }} Yufan Han | <a href="mailto:larryivanhan@gmail.com" class="hover:underline">{{ footer.reportBugsText || 'Report bugs' }}</a>
+        </p>
       </div>
     </div>
   </footer>
