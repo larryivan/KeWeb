@@ -1,5 +1,9 @@
 # Ke's Lab Website
 
+<p align="center">
+  <img src="https://www.wangke-evoanthropology.site/logo.png" alt="Ke's Lab Logo" width="120">
+</p>
+
 This is the source code repository of the website for Ke Wang's Lab at Fudan University.
 
 ## Website
