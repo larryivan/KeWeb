@@ -47,9 +47,9 @@ export default defineConfig({
         nav: [
           { text: "博客", link: "/zh/Notes/index" },
           { text: "学术成果", link: "/zh/Publications" },
-          { text: "公众科普", link: "/zh/PO."},
+          { text: "公众科普", link: "/zh/PO"},
           { text: "媒体报道", link: "/zh/Press"},
-          { text: "软件", link: "/zh/Software." },
+          { text: "软件", link: "/zh/Software" },
           { text: "成员", link: "/zh/Members" },
           { text: "联系我们", link: "/zh/Contact" },
         ],
