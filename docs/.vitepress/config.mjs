@@ -6,7 +6,18 @@ export default defineConfig({
   // 标签上显示的网站标题
   title: "王轲课题组",
   // 在标签上显示所的 logo
-  head: [["link", { rel: "icon", href: "/logo.png" }]],
+  head: [
+    ["link", { rel: "icon", href: "/logo.png" }],
+    // Open Graph
+    ["meta", { property: "og:type", content: "website" }],
+    ["meta", { property: "og:site_name", content: "Ke's Lab - Fudan University" }],
+    ["meta", { property: "og:image", content: "https://wangke-evoanthropology.site/logo.png" }],
+    ["meta", { property: "og:image:width", content: "200" }],
+    ["meta", { property: "og:image:height", content: "200" }],
+    // Twitter Card
+    ["meta", { name: "twitter:card", content: "summary" }],
+    ["meta", { name: "twitter:image", content: "https://wangke-evoanthropology.site/logo.png" }],
+  ],
 
   // 网站描述，有利于被搜索引擎捕获
   description:
@@ -24,6 +35,13 @@ export default defineConfig({
       title: "Ke's Lab",
       description:
         "Welcome to Ke's Lab, where we explore human evolutionary history through paleogenomics, bioinformatics, and population genetics, integrating ancient DNA evidence with archaeological findings and linguistic theories to unravel the story of our species' origins and migrations across time.",
+      head: [
+        ["meta", { property: "og:title", content: "Ke's Lab - Paleogenomics and Evolution Research" }],
+        ["meta", { property: "og:description", content: "Exploring human evolutionary history through ancient DNA, bioinformatics, and interdisciplinary approaches at Fudan University." }],
+        ["meta", { property: "og:locale", content: "en_US" }],
+        ["meta", { name: "twitter:title", content: "Ke's Lab - Paleogenomics and Evolution Research" }],
+        ["meta", { name: "twitter:description", content: "Exploring human evolutionary history through ancient DNA, bioinformatics, and interdisciplinary approaches at Fudan University." }],
+      ],
       themeConfig: {
         lastUpdatedText: 'Last Updated',
         footer: {
@@ -45,6 +63,13 @@ export default defineConfig({
       link: '/zh/',
       title: "王轲课题组",
       description: '欢迎来到王轲课题组，我们通过古基因组学、生物信息学和群体遗传学探索人类进化历史，整合古DNA证据与考古发现和语言学理论，揭示我们物种起源和迁徙的故事。',
+      head: [
+        ["meta", { property: "og:title", content: "王轲课题组 - 古基因组学与进化研究" }],
+        ["meta", { property: "og:description", content: "复旦大学王轲课题组，通过古DNA、生物信息学和跨学科方法探索人类进化历史。" }],
+        ["meta", { property: "og:locale", content: "zh_CN" }],
+        ["meta", { name: "twitter:title", content: "王轲课题组 - 古基因组学与进化研究" }],
+        ["meta", { name: "twitter:description", content: "复旦大学王轲课题组，通过古DNA、生物信息学和跨学科方法探索人类进化历史。" }],
+      ],
       themeConfig: {
         nav: [
           { text: "博客", link: "/zh/Notes/index" },
