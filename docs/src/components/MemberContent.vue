@@ -328,6 +328,13 @@ const memberCategories = [
         name: "Li, Lei 李雷",
         image: "https://larryivan.github.io/picx-images-hosting/20250926/ll.1hsl1zebc5.webp",
         bio: "I graduated from the National Life Science Base Class at Huazhong Agricultural University in 2022 with a Bachelor's degree. In 2025, I obtained my Master's degree in Biology from ShanghaiTech University (jointly trained at Fudan University Cancer Hospital). Currently, I am pursuing a Ph.D. in Anthropology at the School of Life Sciences, Fudan University, dedicated to exploring human origins and evolution, hoping to further understand the fundamental question of 'what makes us human'.",
+      },
+      {
+        id: "qm",
+        name: "Qiu, Min 邱敏",
+        image: "https://larryivan.github.io/picx-images-hosting/20261025/qm.fz4eafwcx1.webp",
+        bio: "I obtained my Master's degree in Animal Science from Northwest A&F University and am currently pursuing a Ph.D. at the School of Life Sciences, Fudan University, working on ancient DNA and population genetics. My research focuses on the genetic history of ancient populations in China, aiming to understand the genetic characteristics, ancestral origins, and interactions of populations across different periods through the analysis of ancient genomic data.",
+        email: "qiumin2023@163.com",
       }
     ]
   },
@@ -353,6 +360,12 @@ const memberCategories = [
         image: "https://larryivan.github.io/picx-images-hosting/20250917/ljy.1zimeemgxl.webp",
         bio: "I am currently pursuing a Master’s degree in Biology at Fudan University, after earning my Bachelor’s degree in Bioinformatics from Huazhong Agricultural University. My research interests in population genetics in East Asia, with particular attention to genetic interactions during periods of cultural exchange. Ancient DNA analysis with statistical modeling and integrate evidence from archaeology and other disciplines are combined to reveal patterns of population migration and social structure evolution.",
         email: "biqiuso0614@gmail.com",
+      },
+      {
+        id: "wjh",
+        name: "Wang, Jiahao 王嘉豪",
+        image: "https://larryivan.github.io/picx-images-hosting/20261025/wjh.qo9rcd26r8.webp",
+        bio: "I received my Bachelor's degree in Bioengineering from Southeast University in 2026 and am currently pursuing a Master's degree in Biology at the School of Life Sciences, Fudan University. My main work involves ancient DNA extraction from archaeological samples, whole-genome library construction, and data analysis, aiming to explore the history of migration and exchange among East Asian populations through ancient genomic data. Outside of research, I love traveling and enjoy discovering new things in everyday life.",
       }
     ]
   },
