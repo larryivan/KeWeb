@@ -304,7 +304,7 @@ export const HOME = {
   },
 
   people: {
-    kicker: { en: "People", zh: "团队" },
+    kicker: { en: "People", zh: "关于我们" },
     h2: { en: "The people", zh: "我们的团队" },
     pi: {
       name: { en: "Dr. Ke Wang", zh: "王轲 博士" },
@@ -325,7 +325,7 @@ export const HOME = {
       ],
       link: { en: "Full profile", zh: "完整简介", href: "/Contact" },
     },
-    teamLabel: { en: "The team", zh: "团队成员" },
+    teamLabel: { en: "Members", zh: "成员" },
     groups: {
       phd: { en: "PhD students", zh: "博士研究生" },
       master: { en: "Master’s students", zh: "硕士研究生" },
