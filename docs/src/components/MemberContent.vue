@@ -353,6 +353,13 @@ const memberCategories = [
         image: "https://larryivan.github.io/picx-images-hosting/20250917/ljy.1zimeemgxl.webp",
         bio: "I am currently pursuing a Master’s degree in Biology at Fudan University, after earning my Bachelor’s degree in Bioinformatics from Huazhong Agricultural University. My research interests in population genetics in East Asia, with particular attention to genetic interactions during periods of cultural exchange. Ancient DNA analysis with statistical modeling and integrate evidence from archaeology and other disciplines are combined to reveal patterns of population migration and social structure evolution.",
         email: "biqiuso0614@gmail.com",
+      },
+      {
+        id: "qm",
+        name: "Qiu, Min 邱敏",
+        image: "https://larryivan.github.io/picx-images-hosting/20261025/qm.fz4eafwcx1.webp",
+        bio: "I received my Bachelor's degree in Bioengineering from Southeast University in 2026 and am currently pursuing a Master's degree in Biology at the School of Life Sciences, Fudan University. My main work involves ancient DNA extraction from archaeological samples, whole-genome library construction, and data analysis, aiming to explore the history of migration and exchange among East Asian populations through ancient genomic data. Outside of research, I love traveling and enjoy discovering new things in everyday life.",
+        email: "qiumin2023@163.com",
       }
     ]
   },
