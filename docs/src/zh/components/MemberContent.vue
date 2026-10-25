@@ -260,6 +260,12 @@ const memberCategories = [
         image: "https://larryivan.github.io/picx-images-hosting/20250917/ljy.1zimeemgxl.webp",
         bio: "我本科毕业于华中农业大学生物信息学专业，现于复旦大学攻读生物学硕士学位。我的研究方向为东亚群体遗传学，尤其关注文化交流时期的基因互动。研究方法整合了古DNA分析、统计建模以及考古学等多学科证据，旨在揭示人群迁徙模式与社会结构的演化规律。",
         email: "biqiuso0614@gmail.com",
+      },
+      {
+        id: "wjh",
+        name: "Wang, Jiahao 王嘉豪",
+        image: "https://larryivan.github.io/picx-images-hosting/20261025/wjh.qo9rcd26r8.webp",
+        bio: "我于2026年获得东南大学生物工程学士学位，目前在复旦大学生命科学学院攻读生物学硕士学位。我的主要工作包括考古样本的古DNA提取、全基因组文库构建及数据分析，希望通过古基因组数据探索东亚人群的迁徙与交流历史。科研之外，我喜欢四处旅行，享受在日常生活中发现新事物的乐趣。",
       }
     ]
   },
