@@ -19,7 +19,7 @@
 // rel=noopener · 6 root height · 7 Join door above the fold (390) · 8 no dimmed text · 9 reduced motion
 // (no motion library downloaded, no rAF 3–5 s, instant camera) · 10 CLS < 0.02 · 11 LCP element ·
 // 12 text facts (hero stat, banned strings, no v2-removed pill / motion toggle) · 13 sans-only (no serif font
-// requested; h1 / h2 / lede computed font-family has no serif; fonts same-origin) · 14 sticky stage / mini-maps ·
+// requested; h1 / h2 / lede computed font-family has no serif; fonts same-origin) · 14 sticky stage (pinned on phones too) ·
 // 15 lite: no canvas, poster visible · 16 screenshots.
 const { chromium } = require('playwright')
 const fs = require('fs')
@@ -265,7 +265,7 @@ async function runOne(browser, p, v) {
     set(8, dom.dim.length === 0, dom.dim.length ? `${dom.dim.length} dimmed: ` + dom.dim.slice(0, 5).join(' | ') : 'all visible text at opacity ≥ 0.99')
     set(12, dom.heroStat && dom.banned.length === 0 && dom.removed.length === 0, `${dom.heroStat ? 'hero stat ok' : `hero stat missing (${p.startsWith('/zh') ? '1001' : '1,001'})`}${dom.banned.length ? '; banned: ' + dom.banned.join(', ') : ''}${dom.removed.length ? '; v2-removed copy: ' + dom.removed.join(', ') : ''}`)
     if (isDesktop) set(14, !!dom.stage && dom.stage.position === 'sticky', dom.stage ? `stage position ${dom.stage.position}` : 'no .kl-atlas__stage (stub?)')
-    else set(14, !!dom.stage && dom.stage.display === 'none' && dom.minimaps === 6, `${dom.stage ? `stage display ${dom.stage.display}` : 'no .kl-atlas__stage'}; ${dom.minimaps} visible .kl-minimap`)
+    else set(14, !!dom.stage && dom.stage.display !== 'none' && dom.stage.position === 'sticky' && dom.minimaps === 0, `${dom.stage ? `stage display ${dom.stage.display}, position ${dom.stage.position}` : 'no .kl-atlas__stage'}; ${dom.minimaps} .kl-minimap`)
     if (v.lite) set(15, dom.canvases === 0 && dom.poster === true, `${dom.canvases} canvas; poster ${dom.poster === null ? 'missing (.kl-genome-poster)' : dom.poster ? 'visible' : 'hidden'}; data-lite ${dom.lite}`)
     else set(15, null, 'lite only')
   }

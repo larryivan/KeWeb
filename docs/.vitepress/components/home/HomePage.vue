@@ -21,6 +21,14 @@ const motion = provideMotion(root)
     <svg class="kl-defs" width="0" height="0" aria-hidden="true" focusable="false">
       <defs>
         <path id="kl-land" :d="LAND.d" fill="none" stroke="currentColor" stroke-linecap="round" />
+        <!-- Soft vignette in map units: the land fades out towards the frame instead of ending on a straight cut. -->
+        <radialGradient id="kl-land-fade-g" cx=".5" cy=".46" r=".62">
+          <stop offset=".66" stop-color="#fff" />
+          <stop offset="1" stop-color="#000" />
+        </radialGradient>
+        <mask id="kl-land-fade" maskUnits="userSpaceOnUse" x="0" y="0" :width="LAND.w" :height="LAND.h">
+          <rect :width="LAND.w" :height="LAND.h" fill="url(#kl-land-fade-g)" />
+        </mask>
         <radialGradient id="kl-glow">
           <stop offset="0" class="kl-glow-stop" stop-opacity=".35" />
           <stop offset="1" class="kl-glow-stop" stop-opacity="0" />

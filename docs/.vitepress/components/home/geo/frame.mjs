@@ -5,7 +5,7 @@
 export const MAP_W = 1000
 export const STEP = 7
 export const ROTATE = [-65, 0]
-export const FRAME = { lon: [-18, 148], lat: [-36, 62] }
+export const FRAME = { lon: [-26, 165], lat: [-42, 78] }
 
 /**
  * The frame as a MultiPoint of the 4 corners + the top/bottom midpoints.

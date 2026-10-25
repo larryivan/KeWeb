@@ -95,7 +95,14 @@ export function buildAtlas(): AtlasData {
   }
   const [sx, sy] = xy.shanghai
   chapterBox.home = [r1(sx - 25), r1(sy - 18), 50, 36]
-  chapterBox.all = [0, 0, w, h]
+  // The overview frames the studied regions (with room for their halos and labels), not the whole frame:
+  // the frame's outer land only fades into the plate, so it should not shrink the map that matters.
+  {
+    const es = REGIONS.map((r) => extent(r.id))
+    const x0 = Math.max(0, Math.min(...es.map((e) => e[0])) - 45), y0 = Math.max(0, Math.min(...es.map((e) => e[1])) - 80)
+    const x1 = Math.min(w, Math.max(...es.map((e) => e[2])) + 55), y1 = Math.min(h, Math.max(...es.map((e) => e[3])) + 90)
+    chapterBox.all = [r1(x0), r1(y0), r1(x1 - x0), r1(y1 - y0)]
+  }
 
   const heroXY = {} as Record<ChapterId, [number, number]>
   for (const c of CHAPTERS) heroXY[c.id] = proj(c.hero)

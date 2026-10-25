@@ -21,10 +21,10 @@ import { startReads } from './readsCanvas.ts'
 const { t } = useHome()
 const motion = useMotion()
 
-// The land (x 0–1000) plus 50 units of sea west and 120 east (the en "Shanghai" label sits east of its mark),
-// vertically centred. Phones: the land starts ~16 px from the screen edge and every label stays ≥ 10 px inside
-// a 360 px map. From 600 px the svg is drawn at 117 % (CSS below) so the land itself spans the column.
-const vb: ViewBox = [-50, -32, 1170, 802]
+// Cropped to the studied regions (Atlantic coast of Africa → Japan, Scandinavia → central Africa) with room for
+// the labels; the rest of the frame only fades out, so cropping makes the map larger without losing context.
+// From 600 px the svg is drawn at 124 % (CSS below) and spills into the page margin.
+const vb: ViewBox = [30, 40, 900, 660]
 const marks = [...CHAPTERS].sort((a, b) => atlas.heroXY[a.id][0] - atlas.heroXY[b.id][0])
 const home = atlas.xy.shanghai
 const LAND_DELAY = 500 // ms, = the kl-land-in delay below
@@ -112,10 +112,10 @@ onBeforeUnmount(() => {
 <style scoped>
 .kl-hmap { position: relative; --kl-map-label-size: 12px; }
 .kl-hmap :deep(.kl-map) { position: relative; z-index: 1; }
-/* From 600: the land (viewBox x 0–1000 of −50…1120, y 0–738 of −32…770) fills the wrapper exactly; the sea
-   margins spill outside it (percent margins are of the wrapper width = the land width). */
+/* The view is cropped to the studied regions; the land beyond fades out (the #kl-land-fade vignette), so from
+   600 px the map may spill past its column into the page margin without a visible edge. */
 @media (min-width: 600px) {
-  .kl-hmap :deep(.kl-map) { width: 117%; max-width: none; margin: -3.2% 0 -3.2% -5%; }
+  .kl-hmap :deep(.kl-map) { width: 124%; max-width: none; margin: -6% -14% -6% -10%; }
 }
 @media (min-width: 720px) {
   .kl-hmap { --kl-map-label-size: 15px; --kl-map-label-weight: 700; }

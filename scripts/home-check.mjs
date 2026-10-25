@@ -166,16 +166,17 @@ section('2. content guards')
   const hits = banned.filter((s) => blob.includes(s))
   check(hits.length === 0, 'no forbidden strings in the copy', hits.join(', '))
   const rm = D.regionMarkType
-  check(rm('shanghai') === 'home' && rm('seAsia') === 'presentDay' && rm('anatolia') === 'endpoint' && rm('easternAfrica') === 'area'
+  check(rm('shanghai') === 'home' && rm('seAsia') === 'presentDay' && rm('easternAfrica') === 'led'
     && rm('viennaBasin') === 'led' && rm('carpathianBasin') === 'co' && rm('northernChina') === 'co', 'regionMarkType()')
+  check(C.REGIONS.every((r) => !['area', 'endpoint'].includes(rm(r.id))), 'no soft-area ellipses or title-only endpoint dots on the maps')
 }
 
 // ------------------------------------------------------------------------------------------ 3. geometry
 section('3. land + atlas data loader')
 {
   const gz = gzipSync(Buffer.from(LAND.d), { level: 9 }).length
-  check(LAND.w === 1000 && LAND.h === 738 && LAND.step === 7, 'LAND w 1000, h 738, step 7')
-  check(Math.abs(LAND.dots - 7487) <= 7487 * 0.01, 'LAND dots 7,487 (±1%)', String(LAND.dots))
+  check(LAND.w === 1000 && LAND.h === 788 && LAND.step === 7, 'LAND w 1000, h 788, step 7')
+  check(Math.abs(LAND.dots - 7038) <= 7038 * 0.01, 'LAND dots 7,038 (±1%)', String(LAND.dots))
   const { decodeLand } = await imp('lib/land.ts')
   check(decodeLand(LAND.d).length === LAND.dots * 2, 'decodeLand() returns every dot')
   check(gz <= 1800, `land path gzip <= 1.8 KB (${gz} B)`)
@@ -186,14 +187,18 @@ section('3. land + atlas data loader')
   const A = await res.config.load([])
   const ids = C.REGIONS.map((r) => r.id)
   check(ids.every((id) => Array.isArray(A.xy[id]) && A.xy[id].every(Number.isFinite)), `xy for all ${ids.length} regions`)
-  check(ids.length === 21, '21 regions')
-  const expect = { shanghai: [846.1, 229.6], middleNile: [285.1, 324.6], viennaBasin: [222.7, 105.1], otztal: [189.3, 113.8], mongolia: [729.0, 112.4], altai: [605.3, 72.8], yellowRiverBend: [770.2, 167.6], seAsia: [727.8, 328.3] }
+  check(ids.length === 15, '15 regions')
+  const expect = { shanghai: [785.0, 294.1], middleNile: [284.8, 378.8], viennaBasin: [229.2, 183.1], otztal: [199.5, 190.9], mongolia: [680.6, 189.6], altai: [570.3, 154.3], yellowRiverBend: [717.4, 238.9], seAsia: [679.5, 382.1] }
   const off = Object.entries(expect).filter(([id, [x, y]]) => Math.abs(A.xy[id][0] - x) > 1 || Math.abs(A.xy[id][1] - y) > 1)
-  check(off.length === 0, 'projected anchors match §6.4 within ±1 unit', off.map(([id]) => `${id} ${A.xy[id]}`).join('; '))
+  check(off.length === 0, 'projected anchors match the frame within ±1 unit', off.map(([id]) => `${id} ${A.xy[id]}`).join('; '))
   const boxKeys = [...C.CHAPTERS.map((c) => c.id), 'home', 'all']
   check(boxKeys.every((k) => A.chapterBox[k]?.length === 4) && Object.keys(A.chapterBox).length === 7, 'chapterBox for 5 chapters + home + all')
-  check(JSON.stringify(A.chapterBox.all) === JSON.stringify([0, 0, 1000, 738]), 'chapterBox.all = [0, 0, 1000, 738]')
-  check(A.popOrder[0] === 'shanghai' && A.popOrder.length === 21, 'popOrder starts with shanghai and lists all regions')
+  {
+    const [bx, by, bw, bh] = A.chapterBox.all
+    const inAll = ids.every((id) => A.xy[id][0] > bx && A.xy[id][0] < bx + bw && A.xy[id][1] > by && A.xy[id][1] < by + bh)
+    check(inAll && bx >= 0 && by >= 0 && bx + bw <= A.w && by + bh <= A.h && bw < A.w, 'chapterBox.all frames every region, inside the land frame and tighter than it', A.chapterBox.all.join(' '))
+  }
+  check(A.popOrder[0] === 'shanghai' && A.popOrder.length === ids.length, 'popOrder starts with shanghai and lists all regions')
   check(!('arcs' in A) && !('arcMid' in A), 'no arcs / arcMid in the atlas data (v2 draws no link arcs)')
   check(C.REGIONS.filter((r) => r.kind === 'area').every((r) => A.areas[r.id]?.every((v) => v > 0)), 'areas: projected radii for every area region')
   check(C.CHAPTERS.every((c) => A.heroXY[c.id]?.length === 2) && A.shanghaiPct.length === 2, 'heroXY + shanghaiPct')

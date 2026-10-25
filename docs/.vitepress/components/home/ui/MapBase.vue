@@ -90,7 +90,9 @@ defineExpose({ setViewBox, getViewBox, size, svgEl })
   <svg ref="svgEl" class="kl-map" :viewBox="vbString(viewBox)" preserveAspectRatio="xMidYMid meet"
        :aria-hidden="label ? undefined : 'true'" :role="label ? 'img' : undefined" :aria-label="label || undefined"
        focusable="false" :style="`--kl-u:${ssr.u}`">
-    <use ref="landEl" href="#kl-land" class="kl-map__land" :style="`stroke-width:${ssr.stroke}px`" />
+    <g mask="url(#kl-land-fade)">
+      <use ref="landEl" href="#kl-land" class="kl-map__land" :style="`stroke-width:${ssr.stroke}px`" />
+    </g>
     <slot />
   </svg>
 </template>

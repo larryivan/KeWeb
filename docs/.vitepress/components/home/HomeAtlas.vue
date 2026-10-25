@@ -1,8 +1,8 @@
 <script setup lang="ts">
 // HomeAtlas — "Findings" (#findings). Desktop (>= 960 px): the text column (intro, five chapters, home) scrolls
 // past a sticky map stage whose camera glides to each chapter's regions and finally home to Shanghai.
-// Below 960 px: no stage; each chapter opens with its own mini map. The chapters and cards are the text
-// equivalent of the maps (stage and mini maps are aria-hidden).
+// Below 960 px: the same stage is pinned to the top of the screen and the chapters scroll beneath it. The
+// chapters and cards are the text equivalent of the map (the stage is aria-hidden).
 import { ref } from 'vue'
 import { HOME, CHAPTERS, REGIONS } from './home.content.ts'
 import type { RegionId } from './home.content.ts'
@@ -66,8 +66,12 @@ const setStage = (c: unknown) => {
 .kl-atlas__stop { margin-top: 64px; }
 .kl-atlas__all { margin-top: 28px; align-self: flex-start; justify-self: start; }
 @media (max-width: 959px) {
-  .kl-atlas__stage { display: none; }
-  .kl-atlas__intro { margin-bottom: 40px; }
+  /* The nav scrolls away below 960 px, so the stage pins to the very top. Its 10px bg-coloured halo hides the
+     cards sliding underneath; the chapters keep enough height to hold each view while they are read. */
+  .kl-atlas__intro { margin-bottom: 28px; }
+  .kl-atlas__stage { position: sticky; top: 10px; z-index: 3; height: clamp(220px, 64vw, 42svh); margin-bottom: 8px; border-radius: 16px; }
+  .kl-atlas__stop { margin-top: 0; padding-block: 44px; min-height: 52svh; }
+  .kl-atlas__home { min-height: 40svh; }
 }
 @media (min-width: 960px) {
   .kl-atlas__grid {
@@ -93,22 +97,27 @@ const setStage = (c: unknown) => {
 </style>
 
 <style>
-/* The map panels (sticky stage and mini maps) share one look: a bg-2 plate whose dot land keeps its share of the
+/* The map panel (the sticky stage at every width): a bg-2 plate whose dot land keeps its share of the
    grid at every zoom (a constant size in map units, so a close view still draws coasts), dissolves into the
    plate's edge instead of being cut by it, and lets context marks recede to a faint dot. */
-.kl-home :is(.kl-atlas__stage, .kl-minimap) {
+.kl-home .kl-atlas__stage {
   --kl-map-bg: var(--kl-bg-2); --kl-land: rgba(30, 58, 138, .3);
   overflow: hidden; background: var(--kl-bg-2); border: 1px solid var(--kl-line); box-shadow: var(--kl-shadow);
 }
-.dark .kl-home :is(.kl-atlas__stage, .kl-minimap) { --kl-land: rgba(148, 163, 184, .4); }
-.kl-home :is(.kl-atlas__stage, .kl-minimap) .kl-map { height: 100%; }
-.kl-home :is(.kl-atlas__stage, .kl-minimap) .kl-map__land { stroke-width: max(2.5px, calc(var(--kl-u, 1) * var(--dot, 1.6px))) !important; }
-.kl-home :is(.kl-atlas__stage, .kl-minimap)::after {
+.dark .kl-home .kl-atlas__stage { --kl-land: rgba(148, 163, 184, .4); }
+/* Phones: the pinned stage wears a bg-coloured halo (12 px all round, deeper below) so nothing that scrolls
+   beneath it shows at its edges. (Here, not in the scoped block: it must win over the panel shadow above.) */
+@media (max-width: 959px) {
+  .kl-home .kl-atlas__stage.kl-atlas__stage { box-shadow: 0 0 0 12px var(--kl-bg), 0 22px 18px 4px var(--kl-bg), var(--kl-shadow); }
+}
+.kl-home .kl-atlas__stage .kl-map { height: 100%; }
+.kl-home .kl-atlas__stage .kl-map__land { stroke-width: max(2.5px, calc(var(--kl-u, 1) * var(--dot, 1.6px))) !important; }
+.kl-home .kl-atlas__stage::after {
   content: ''; position: absolute; inset: 0; pointer-events: none; border-radius: inherit;
   box-shadow: inset 0 0 var(--fade) calc(var(--fade) / 4) var(--kl-bg-2);
 }
 /* Context endpoints (Steppe, Central Plains, …) are named more quietly than the study sites. */
-.kl-home :is(.kl-atlas__stage, .kl-minimap) .kl-mark--endpoint .kl-map-label { font-size: 12px; font-weight: 500; fill: var(--kl-ink-3); }
-.kl-home :is(.kl-atlas__stage, .kl-minimap) .kl-mark__ring { transition: opacity var(--kl-t-base) var(--kl-ease-std); }
-.kl-home :is(.kl-atlas__stage, .kl-minimap) .kl-mark.is-dim:not(.is-active, .is-hot) .kl-mark__ring { opacity: 0; }
+.kl-home .kl-atlas__stage .kl-mark--endpoint .kl-map-label { font-size: 12px; font-weight: 500; fill: var(--kl-ink-3); }
+.kl-home .kl-atlas__stage .kl-mark__ring { transition: opacity var(--kl-t-base) var(--kl-ease-std); }
+.kl-home .kl-atlas__stage .kl-mark.is-dim:not(.is-active, .is-hot) .kl-mark__ring { opacity: 0; }
 </style>

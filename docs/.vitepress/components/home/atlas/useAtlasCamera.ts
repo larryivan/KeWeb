@@ -4,7 +4,7 @@
 // (viewBox + a label side per focus region so every label stays inside the frame and off the other marks),
 // and a smooth pan-and-zoom path between two views (van Wijk & Nuij, as in d3-interpolate's interpolateZoom).
 //
-// Composable part (desktop stage only): an IntersectionObserver on the [data-stop] blocks picks the active
+// Composable part (the stage, at every width): an IntersectionObserver on the [data-stop] blocks picks the active
 // stop (the one crossing the middle 10 % of the viewport); the camera then glides there with GSAP
 // (1.0 s, power3.inOut) or jumps there at once when motion is off / GSAP is not loaded. While the stage's
 // first-view reveal plays, the camera holds the overview and glides on once it is done. It never needs GSAP
@@ -537,7 +537,9 @@ export function useAtlasCamera(o: CameraOpts) {
       let next: StopId | null = null
       for (const s of STOPS) if (inBand.has(s)) next = s
       if (next) { wanted = next; follow() }
-    }, { rootMargin: '-45% 0px -45% 0px' })
+    // Desktop: the stage sits beside the text, so the stop at mid-screen is the one being read. Phones: the stage
+    // is pinned at the top, so the reading line is lower, in the middle of the space left under it.
+    }, { rootMargin: mq?.matches === false ? '-62% 0px -30% 0px' : '-45% 0px -45% 0px' })
     for (const el of root.querySelectorAll<HTMLElement>('[data-stop]')) io.observe(el)
     const st = o.stage.value
     if (st && typeof ResizeObserver !== 'undefined') {
@@ -570,7 +572,8 @@ export function useAtlasCamera(o: CameraOpts) {
 
   onMounted(() => {
     mq = window.matchMedia('(min-width: 960px)')
-    const sync = () => (mq!.matches ? start() : stop())
+    // Every width has the stage (pinned at the top below 960 px); a breakpoint flip only re-arms the observer.
+    const sync = () => { stop(); start() }
     mq.addEventListener('change', sync)
     offs.push(() => mq!.removeEventListener('change', sync))
     sync()
