@@ -3,15 +3,23 @@
   "devDependencies": {
     "@types/node": "^20.17.6",
     "autoprefixer": "^10.4.20",
+    "d3-geo": "3.1.1",
     "markdown-it-mathjax3": "^4.3.2",
     "medium-zoom": "^1.1.0",
     "tailwindcss": "^3.4.15",
-    "vitepress": "^1.5.0"
+    "topojson-client": "3.1.0",
+    "vitepress": "^1.5.0",
+    "world-atlas": "2.0.2"
   },
   "scripts": {
     "docs:dev": "vitepress dev docs",
     "docs:build": "vitepress build docs",
-    "docs:preview": "vitepress preview docs"
+    "docs:preview": "vitepress preview docs",
+    "home:land": "node scripts/home-land.mjs",
+    "home:assets": "node scripts/home-tools/images.mjs",
+    "home:check": "node scripts/home-check.mjs",
+    "home:budget": "node scripts/home-budget.mjs",
+    "home:qa": "node scripts/home-qa.cjs"
   },
   "postcss": {
     "plugins": {
@@ -21,8 +29,10 @@
   },
   "dependencies": {
     "@vercel/speed-insights": "^1.2.0",
+    "@vueuse/core": "^11.2.0",
     "dayjs": "^1.11.13",
     "gray-matter": "^4.0.3",
+    "gsap": "3.15.0",
     "vue": "^3.5.13"
   }
 }
