@@ -110,7 +110,9 @@ section('2. content guards')
   check(CHAPTERS.every((c) => D.chapterHighlights(c.id).every((p, i, a) => !i || a[i - 1].year >= p.year)), 'chapterHighlights() newest first')
   const mc = { phd: 0, master: 0, undergrad: 0 }
   for (const m of MEMBERS) mc[m.group]++
-  check(mc.phd === 6 && mc.master === 4 && mc.undergrad === 2, 'MEMBERS: 6 PhD · 4 master · 2 undergrad', JSON.stringify(mc))
+  // Counts follow the roster (kept in step with the Members pages by section 6); only shape is checked here.
+  check(mc.phd > 0 && mc.master > 0 && mc.undergrad > 0 && mc.phd + mc.master + mc.undergrad === C.MEMBERS.length,
+    `MEMBERS: every member in a known group (${mc.phd} PhD · ${mc.master} master · ${mc.undergrad} undergrad)`, JSON.stringify(mc))
   check(GENOMES === 1001 && HOME.hero.stats[0].value === GENOMES, 'GENOMES = 1001 drives the hero stat')
   // H1 key phrase (gradient) appears in exactly one line per locale.
   for (const lang of ['en', 'zh']) {

@@ -336,6 +336,13 @@ const memberCategories = [
         image: "https://larryivan.github.io/picx-images-hosting/20261025/qm.fz4eafwcx1.webp",
         bio: "I obtained my Master's degree in Animal Science from Northwest A&F University and am currently pursuing a Ph.D. at the School of Life Sciences, Fudan University, working on ancient DNA and population genetics. My research focuses on the genetic history of ancient populations in China, aiming to understand the genetic characteristics, ancestral origins, and interactions of populations across different periods through the analysis of ancient genomic data.",
         email: "qiumin2023@163.com",
+      },
+      {
+        id: "zcc",
+        name: "Zhang, Chengcheng 张骋骋",
+        image: "https://larryivan.github.io/picx-images-hosting/20250507/Screenshot-2025-05-07-at-15.44.16.60ugiepzcx.jpg",
+        bio: "I received my Bachelor’s degree in Life Sciences from Jilin University, joined the School of Life Sciences at Fudan University in 2024, and am now a PhD student. My current work focuses on ancient DNA research, particularly wet lab procedures such as the construction of whole-genome libraries from archaeological samples. Currently, I am interested in genome-wide analysis of ancient East Asian populations.Outside of the lab, I enjoy walking around the city, swimming, and spending time with cats.",
+        email: "zhangchengcheng62@gmail.com",
       }
     ]
   },
@@ -347,13 +354,6 @@ const memberCategories = [
         name: "Qi, Yimeng 齐艺萌",
         image: "https://larryivan.github.io/picx-images-hosting/20250507/4qym-1.7zqn8r270u.jpg",
         bio: "I am currently pursuing my Master's degree in Biology and Medicine at Fudan University, studying population genetics and human history in Central and East Asia. Prior to this, I worked as an immunological detection researcher at IVC Company after receiving my Bachelor's degree in Biotechnology from Nanchang University (2021). My research interests lie in understanding human population history through an interdisciplinary approach, combining evidence from population genetics, archaeological findings, and paleoclimatic records. Currently, I focus on reconstructing migration patterns and demographic history across the Asian continent, using ancient DNA data to investigate historical population dynamics and social structures.",
-      },
-      {
-        id: "zcc",
-        name: "Zhang, Chengcheng 张骋骋",
-        image: "https://larryivan.github.io/picx-images-hosting/20250507/Screenshot-2025-05-07-at-15.44.16.60ugiepzcx.jpg",
-        bio: "I received my Bachelor’s degree in Life Sciences from Jilin University and began my Master’s studies at the School of Life Sciences, Fudan University in 2024. My current work focuses on ancient DNA research, particularly wet lab procedures such as the construction of whole-genome libraries from archaeological samples. Currently, I am interested in genome-wide analysis of ancient East Asian populations.Outside of the lab, I enjoy walking around the city, swimming, and spending time with cats.",
-        email: "zhangchengcheng62@gmail.com",
       },
       {
         id: "ljy",
