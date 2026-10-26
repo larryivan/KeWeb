@@ -1,0 +1,12 @@
+{
+  "name": "kl-home-tools",
+  "private": true,
+  "type": "module",
+  "description": "Manual, local-only asset tool for the homepage (image variants for the image host). Not installed by Vercel; never part of docs:build.",
+  "scripts": {
+    "images": "node images.mjs"
+  },
+  "dependencies": {
+    "sharp": "0.35.5"
+  }
+}
