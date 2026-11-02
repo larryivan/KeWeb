@@ -236,6 +236,13 @@ const memberCategories = [
         bio: "我硕士毕业于西北农林科技大学动物科学专业，目前在复旦大学生命科学学院攻读博士学位，主要从事古DNA与群体遗传学研究。我的研究主要关注中国古代人群的遗传历史，希望通过分析古基因组数据，了解不同时期人群的遗传特征、祖先来源以及人群之间的交流。",
         email: "qiumin2023@163.com",
       },
+      {
+        id: "zcc",
+        name: "Zhang, Chengcheng 张骋骋",
+        image: "https://larryivan.github.io/picx-images-hosting/20250507/Screenshot-2025-05-07-at-15.44.16.60ugiepzcx.jpg",
+        bio: "我获得了吉林大学生命科学学士学位，2024年进入复旦大学生命科学学院，现攻读博士学位。我目前的工作重点是古DNA研究，特别是湿实验程序，如从考古样本中构建全基因组文库。目前，我对古代东亚人群的全基因组分析感兴趣。在实验室之外，我喜欢在城市里散步、游泳和与猫共度时光。",
+        email: "zhangchengcheng62@gmail.com",
+      }
     ]
   },
   {
@@ -246,13 +253,6 @@ const memberCategories = [
         name: "Qi, Yimeng 齐艺萌",
         image: "https://larryivan.github.io/picx-images-hosting/20250507/4qym-1.7zqn8r270u.jpg",
         bio: "我目前在复旦大学攻读生物学与医学硕士学位，研究中亚和东亚的人口遗传学和人类历史。在此之前，我于2021年获得南昌大学生物技术学士学位后，在IVC公司担任免疫学检测研究员。我的研究兴趣在于通过跨学科方法理解人类人口历史，结合人口遗传学、考古发现和古气候记录的证据。目前，我专注于利用古DNA数据重建亚洲大陆的迁徙模式和人口历史，调查历史人口动态和社会结构。",
-      },
-      {
-        id: "zcc",
-        name: "Zhang, Chengcheng 张骋骋",
-        image: "https://larryivan.github.io/picx-images-hosting/20250507/Screenshot-2025-05-07-at-15.44.16.60ugiepzcx.jpg",
-        bio: "我获得了吉林大学生命科学学士学位，并于2024年开始在复旦大学生命科学学院攻读硕士学位。我目前的工作重点是古DNA研究，特别是湿实验程序，如从考古样本中构建全基因组文库。目前，我对古代东亚人群的全基因组分析感兴趣。在实验室之外，我喜欢在城市里散步、游泳和与猫共度时光。",
-        email: "zhangchengcheng62@gmail.com",
       },
       {
         id: "ljy",
