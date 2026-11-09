@@ -55,7 +55,7 @@ defineExpose({ el, map: (): MapApi | null => mapRef.value })
   <div ref="el" v-reveal.custom="{ threshold: 0.5 }" class="kl-atlas__stage" aria-hidden="true" :style="vars">
     <div class="kl-atlas__glow" />
     <div class="kl-atlas__plate">
-      <MapBase ref="mapRef" :view-box="vb0" :ssr-width="544">
+      <MapBase ref="mapRef" :view-box="vb0" :ssr-width="544" canvas>
         <g v-for="r in regions" :key="r.id" class="kl-atlas__pop" :data-r="r.id" :style="`--i:${pop[r.id]}`">
           <template v-if="r.type === 'area' && r.area">
             <MapArea :x="r.x" :y="r.y" :rx="r.area[0]" :ry="r.area[1]" :label="r.label" :label-side="side(r.id)"
@@ -84,9 +84,7 @@ defineExpose({ el, map: (): MapApi | null => mapRef.value })
   border-radius: 50%; background: radial-gradient(closest-side, var(--kl-accent-soft), transparent);
   transition: left 1s var(--kl-ease-inout), top 1s var(--kl-ease-inout);
 }
-.kl-atlas__plate { position: absolute; inset: 0; transition: opacity .28s var(--kl-ease-out); }
-/* Phones: the camera cuts instead of gliding; the map dips out (160 ms) for the cut, then fades back in. */
-.kl-atlas__stage.is-swap .kl-atlas__plate { opacity: .12; transition: opacity .16s ease-in; }
+.kl-atlas__plate { position: absolute; inset: 0; }
 /* Labels and glows belong to the active stop only… */
 .kl-atlas__stage :deep(:is(.kl-mark__label, .kl-area__label, .kl-mark__glow)) { opacity: 0; transition: opacity var(--kl-t-base) var(--kl-ease-std); }
 .kl-atlas__stage :deep(:is(.is-active, .is-hot) > :is(.kl-mark__label, .kl-area__label)),

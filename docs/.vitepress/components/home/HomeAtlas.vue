@@ -111,7 +111,9 @@ const setStage = (c: unknown) => {
   .kl-home .kl-atlas__stage.kl-atlas__stage { box-shadow: 0 0 0 12px var(--kl-bg), 0 22px 18px 4px var(--kl-bg), var(--kl-shadow); }
 }
 .kl-home .kl-atlas__stage .kl-map { height: 100%; }
-.kl-home .kl-atlas__stage .kl-map__land { stroke-width: max(2.5px, calc(var(--kl-u, 1) * var(--dot, 1.6px))) !important; }
+/* Land dot size in map units (--land-min) or screen px (--dot); MapBase's canvas reads the same two values. */
+.kl-home .kl-atlas__stage { --land-min: 2.5px; --dot: 1.6px; }
+.kl-home .kl-atlas__stage .kl-map__land { stroke-width: max(var(--land-min), calc(var(--kl-u, 1) * var(--dot))) !important; }
 .kl-home .kl-atlas__stage::after {
   content: ''; position: absolute; inset: 0; pointer-events: none; border-radius: inherit;
   box-shadow: inset 0 0 var(--fade) calc(var(--fade) / 4) var(--kl-bg-2);

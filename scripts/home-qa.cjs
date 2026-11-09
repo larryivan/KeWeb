@@ -20,7 +20,7 @@
 // (no motion library downloaded, no rAF 3–5 s, instant camera) · 10 CLS < 0.02 · 11 LCP element ·
 // 12 text facts (hero stat, banned strings, no v2-removed pill / motion toggle) · 13 sans-only (no serif font
 // requested; h1 / h2 / lede computed font-family has no serif; fonts same-origin) · 14 sticky stage (pinned on phones too) ·
-// 15 lite: no canvas, poster visible · 16 screenshots.
+// 15 lite: no animation canvas (the atlas land renderer .kl-map__canvas is allowed), poster visible · 16 screenshots.
 const { chromium } = require('playwright')
 const fs = require('fs')
 const os = require('os')
@@ -222,7 +222,8 @@ async function runOne(browser, p, v) {
     const stage = main.querySelector('.kl-atlas__stage')
     out.stage = stage ? { position: getComputedStyle(stage).position, display: getComputedStyle(stage).display } : null
     out.minimaps = [...main.querySelectorAll('.kl-minimap')].filter((m) => m.getClientRects().length && getComputedStyle(m).visibility === 'visible').length
-    out.canvases = main.querySelectorAll('canvas').length
+    // The atlas land renderer is not an animation: it replaces a heavier SVG path, so lite devices keep it.
+    out.canvases = main.querySelectorAll('canvas:not(.kl-map__canvas)').length
     const poster = main.querySelector('.kl-genome-poster')
     if (poster) {
       const cs = getComputedStyle(poster)

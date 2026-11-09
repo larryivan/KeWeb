@@ -404,9 +404,6 @@ export interface CameraOpts {
   fs?: number
 }
 
-/** Phones: how long the map takes to dip out before it cuts to the next view (ms; = .is-swap in AtlasStage). */
-const SWAP_OUT = 160
-
 /** How long the camera holds the overview once the stage's reveal has started (ms). */
 const REVEAL_HOLD = 1400
 
@@ -425,7 +422,6 @@ export function useAtlasCamera(o: CameraOpts) {
   const glow = ref(glowOf('intro', vbIntro, o.atlas))
 
   let gsap: SceneApi['gsap'] | null = null
-  let swapTimer: ReturnType<typeof setTimeout> | undefined
   let tween: { kill(): void } | null = null
   let target: ViewBox | null = null
   let refit = false
@@ -474,22 +470,7 @@ export function useAtlasCamera(o: CameraOpts) {
     target = fit.vb
     tween?.kill()
     tween = null
-    clearTimeout(swapTimer)
-    o.stage.value?.classList.remove('is-swap')
-    if (!animate || !motion.enabled.value || same(m.getViewBox(), fit.vb)) {
-      m.setViewBox(fit.vb)
-      return
-    }
-    // Phones: no glide. Redrawing ~7,000 land dots on every frame drops frames on phone GPUs, so the map
-    // dips out, cuts to the new view and fades back in (opacity only: composited, no repaint mid-animation).
-    if (mq?.matches === false) {
-      const st = o.stage.value
-      if (!st) return m.setViewBox(fit.vb)
-      st.classList.add('is-swap')
-      swapTimer = setTimeout(() => { m.setViewBox(fit.vb); st.classList.remove('is-swap') }, SWAP_OUT)
-      return
-    }
-    if (!gsap) {
+    if (!animate || !gsap || !motion.enabled.value || same(m.getViewBox(), fit.vb)) {
       m.setViewBox(fit.vb)
       return
     }
@@ -608,7 +589,6 @@ export function useAtlasCamera(o: CameraOpts) {
   onBeforeUnmount(() => {
     stop()
     tween?.kill()
-    clearTimeout(swapTimer)
     for (const f of offs.splice(0)) f()
   })
 

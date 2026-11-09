@@ -40,7 +40,7 @@ const tf = computed(() => `translate(${props.x}px, ${props.y}px) scale(var(--kl-
 
 <template>
   <g class="kl-mark" :class="[`kl-mark--${type}`, { 'is-active': active, 'is-hot': hot, 'is-dim': dim }]"
-     :style="{ transform: tf }">
+     :style="{ transform: tf }" :data-at="`${x} ${y}`">
     <g v-if="type !== 'area'" class="kl-mark__glyph">
       <template v-if="type === 'home'">
         <circle class="kl-mark__ring" r="12.5" />
