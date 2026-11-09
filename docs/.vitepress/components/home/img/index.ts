@@ -45,7 +45,7 @@ export const pi: Pic = {
 
 /** WeChat QR, the hosted file as-is (no variant). src: 13.1 KB */
 export const wechatQr: Pic = {
-  id: 'wechatQr', width: 258, height: 258, placeholder: '#9E9E9D',
+  id: 'wechatQr', width: 258, height: 258, placeholder: '#FFFFFF',
   avif: [],
   webp: [],
   src: 'https://larryivan.github.io/picx-images-hosting/20250516/640.1ap7x401ma.jpg',

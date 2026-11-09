@@ -106,7 +106,7 @@ const O = HOME.outreach
    quiet zone (rows 240-248 of 258, below the last module row 239): clip it; the white tile shows through. */
 .kl-join .kl-join__wechat { display: flex; align-items: center; gap: 20px; margin-top: 16px; padding: 12px; background-color: var(--kl-join-card); }
 .kl-join__qr { flex: none; padding: 6px; border-radius: 10px; background: #fff; }
-.kl-join__qr :deep(img) { width: 96px; height: 96px; clip-path: inset(0 0 7% 0); background-color: transparent !important; } /* no grey placeholder square on the white tile */
+.kl-join__qr :deep(img) { width: 96px; height: 96px; clip-path: inset(0 0 7% 0); }
 
 @media (max-width: 399px) {
   .kl-join .kl-join__wechat { gap: 16px; }
