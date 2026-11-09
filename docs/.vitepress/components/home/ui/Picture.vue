@@ -30,7 +30,7 @@ const imgStyle = computed(() => ({
   <picture class="kl-pic">
     <source v-if="pic.avif.length" type="image/avif" :srcset="srcset(pic.avif)" :sizes="sizes" />
     <source v-if="pic.webp.length" type="image/webp" :srcset="srcset(pic.webp)" :sizes="sizes" />
-    <img :class="imgClass" :src="pic.src" :width="pic.width" :height="pic.height" :alt="alt" :loading="loading"
+    <img v-bind="imgClass ? { class: imgClass } : {}" :src="pic.src" :width="pic.width" :height="pic.height" :alt="alt" :loading="loading"
          decoding="async" :fetchpriority="fetchpriority" :style="imgStyle" />
   </picture>
 </template>

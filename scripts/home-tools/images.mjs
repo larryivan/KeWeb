@@ -32,7 +32,8 @@ const JOBS = [
   { id: 'logo', src: { repo: 'docs/src/public/logo.png' }, widths: [160], avif: false, webp: true, fallback: { w: 160, fmt: 'png' }, placeholder: 'transparent' },
 ]
 /** Used as-is from the image host (D1): no variant. */
-const AS_IS = [{ id: 'wechatQr', src: { host: '20250516/640.1ap7x401ma.jpg' } }]
+// The QR always sits on a white tile, so its placeholder is white rather than the image's mean grey.
+const AS_IS = [{ id: 'wechatQr', src: { host: '20250516/640.1ap7x401ma.jpg' }, placeholder: '#FFFFFF' }]
 
 async function readSource(src) {
   if (src.repo) return readFileSync(resolve(REPO, src.repo))
@@ -94,7 +95,7 @@ for (const job of JOBS) {
 for (const job of AS_IS) {
   const buf = await readSource(job.src)
   const meta = await sharp(buf).metadata()
-  pics[job.id] = { id: job.id, width: meta.width, height: meta.height, placeholder: await meanColour(buf), avif: [], webp: [], src: HOST + job.src.host, srcBytes: buf.length }
+  pics[job.id] = { id: job.id, width: meta.width, height: meta.height, placeholder: job.placeholder ?? (await meanColour(buf)), avif: [], webp: [], src: HOST + job.src.host, srcBytes: buf.length }
 }
 
 for (const r of report) console.log(`images: ${r.file.padEnd(18)} ${String(r.w).padStart(4)}×${String(r.h).padEnd(4)} ${(r.bytes / 1000).toFixed(1).padStart(6)} KB`)
