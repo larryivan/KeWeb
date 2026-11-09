@@ -55,7 +55,7 @@ defineExpose({ el, map: (): MapApi | null => mapRef.value })
   <div ref="el" v-reveal.custom="{ threshold: 0.5 }" class="kl-atlas__stage" aria-hidden="true" :style="vars">
     <div class="kl-atlas__glow" />
     <div class="kl-atlas__plate">
-      <MapBase ref="mapRef" :view-box="vb0" :ssr-width="544">
+      <MapBase ref="mapRef" :view-box="vb0" :ssr-width="544" canvas>
         <g v-for="r in regions" :key="r.id" class="kl-atlas__pop" :data-r="r.id" :style="`--i:${pop[r.id]}`">
           <template v-if="r.type === 'area' && r.area">
             <MapArea :x="r.x" :y="r.y" :rx="r.area[0]" :ry="r.area[1]" :label="r.label" :label-side="side(r.id)"

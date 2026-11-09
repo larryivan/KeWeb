@@ -101,10 +101,10 @@ onBeforeUnmount(() => {
 
 <template>
   <div ref="wrap" class="kl-hmap" role="img" :aria-label="t(HOME.hero.mapAlt)">
-    <MapBase ref="base" :view-box="vb" :ssr-width="620">
+    <MapBase ref="base" :view-box="vb" :ssr-width="620" fade>
       <MapMark v-for="(c, i) in marks" :key="c.id" :x="atlas.heroXY[c.id][0]" :y="atlas.heroXY[c.id][1]" type="led"
                :label="t(c.heroLabel)" :label-side="c.heroLabelSide" :style="{ '--i': i }" />
-      <MapMark :x="home[0]" :y="home[1]" type="home" :label="t(HOME.hero.homeLabel)" :style="{ '--i': marks.length }" />
+      <MapMark :x="home[0]" :y="home[1]" type="home" :label="t(HOME.hero.homeLabel)" label-side="s" :style="{ '--i': marks.length }" />
     </MapBase>
   </div>
 </template>
