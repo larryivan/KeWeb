@@ -13,7 +13,9 @@ import { dotStroke, unitsPerPx } from '../lib/camera.js'
 
 export type ViewBox = [number, number, number, number]
 
-const props = withDefaults(defineProps<{ viewBox: ViewBox; ssrWidth?: number; label?: string }>(), { ssrWidth: 600 })
+// fade: the land fades out towards the frame (#kl-land-fade). An SVG mask re-composites the whole land on
+// every repaint, so it is only for maps that do not move (the hero), never for the atlas camera.
+const props = withDefaults(defineProps<{ viewBox: ViewBox; ssrWidth?: number; label?: string; fade?: boolean }>(), { ssrWidth: 600, fade: false })
 
 const svgEl = ref<SVGSVGElement | null>(null)
 const landEl = ref<SVGUseElement | null>(null)
@@ -90,7 +92,7 @@ defineExpose({ setViewBox, getViewBox, size, svgEl })
   <svg ref="svgEl" class="kl-map" :viewBox="vbString(viewBox)" preserveAspectRatio="xMidYMid meet"
        :aria-hidden="label ? undefined : 'true'" :role="label ? 'img' : undefined" :aria-label="label || undefined"
        focusable="false" :style="`--kl-u:${ssr.u}`">
-    <g mask="url(#kl-land-fade)">
+    <g :mask="fade ? 'url(#kl-land-fade)' : undefined">
       <use ref="landEl" href="#kl-land" class="kl-map__land" :style="`stroke-width:${ssr.stroke}px`" />
     </g>
     <slot />

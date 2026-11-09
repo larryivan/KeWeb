@@ -84,7 +84,9 @@ defineExpose({ el, map: (): MapApi | null => mapRef.value })
   border-radius: 50%; background: radial-gradient(closest-side, var(--kl-accent-soft), transparent);
   transition: left 1s var(--kl-ease-inout), top 1s var(--kl-ease-inout);
 }
-.kl-atlas__plate { position: absolute; inset: 0; }
+.kl-atlas__plate { position: absolute; inset: 0; transition: opacity .28s var(--kl-ease-out); }
+/* Phones: the camera cuts instead of gliding; the map dips out (160 ms) for the cut, then fades back in. */
+.kl-atlas__stage.is-swap .kl-atlas__plate { opacity: .12; transition: opacity .16s ease-in; }
 /* Labels and glows belong to the active stop only… */
 .kl-atlas__stage :deep(:is(.kl-mark__label, .kl-area__label, .kl-mark__glow)) { opacity: 0; transition: opacity var(--kl-t-base) var(--kl-ease-std); }
 .kl-atlas__stage :deep(:is(.is-active, .is-hot) > :is(.kl-mark__label, .kl-area__label)),
